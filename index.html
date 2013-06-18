@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script data-main="js/main-min.js" src="js/lib/require-2.1.5-min.js"></script>
+
+    <script id="template-header" type="text/x-handlebars-template">
+        <h1>{{title}}</h1>
+
+        {{#each paragraphs}}
+        <p>{{{this}}}</p>
+        {{/each}}
+    </script>
+
+    <script id="template-profile" type="text/x-handlebars-template">
+        <!-- {{name.first}} {{name.last}} -->
+        <li class="profile-container">
+            <span class="profile-header-container">
+                <span class="profile-image-container"><img
+                        src="{{data.image.source}}" /></span>
+                <span class="profile-header">
+                    <h2 class="profile-name">{{name.first}}<br>{{name.last}}</h2>
+                    <span class="profile-links">
+                        <ul class="inline">
+                            {{#each data.links}}
+                            <li><a href="{{this.url}}" target="_blank">{{this.text}}</a></li>
+                            {{/each}}
+                        </ul>
+                    </span>
+                </span>
+            </span>
+
+            <span class="profile-definition">
+
+                {{#if data.blurb}}
+                <h3 class="profile-definition-section">OVERVIEW</h3>
+                <span class="profile-blurb">
+                    {{#each data.blurb}}
+                    <p>{{{this}}}</p>
+                    {{/each}}
+                </span>
+                {{/if}}
+
+                {{#if data.skillsMatrix}}
+                <h3 class="profile-definition-section">SKILLS</h3>
+                <span class="profile-skills-matrix">
+                    <ul class="inline">
+                        {{#each data.skillsMatrix}}
+                        <li>{{{this}}}</li>
+                        {{/each}}
+                    </ul>
+                </span>
+                {{/if}}
+
+            </span>
+        </li>
+    </script>
+
+    <script id="template-footer" type="text/x-handlebars-template">
+        {{{this}}}
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+
+</head>
+<body>
+
+<div class="main-container">
+
+    <header>
+        <div class="page-header">
+        </div>
+    </header>
+
+    <section>
+
+        <div class="profiles-container">
+
+            <ul class="inline">
+            </ul>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="page-footer">
+        </div>
+    </footer>
+
+    <div class="page-info">
+        <div class="dimensions" title="current screen dimensions"></div>
+    </div>
+
+</div>
+
+</body>
+</html>
