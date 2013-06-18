@@ -16,8 +16,10 @@ The functionality has been implemented using the following methods:
 
 * HandleBars + Require:
   * [source] (https://github.com/mcalthrop/profiles/tree/imp/handlebars)
-  * [demo site] (http://www.mattcalthrop.com/portfolio/profiles/)
-* AngularJS (in progress)
+  * [demo site] (http://www.mattcalthrop.com/portfolio/profiles/handlebars/)
+* AngularJS (in progress):
+  * [source] (https://github.com/mcalthrop/profiles/tree/imp/angular)
+  * [demo site] (http://www.mattcalthrop.com/portfolio/profiles/angular/)
 
 View on different devices to see how the design changes (common codebase &ndash; no m-dot).
 
