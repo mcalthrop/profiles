@@ -14,11 +14,10 @@ It is intended as a demonstration of technical capabilities rather than design o
 
 The functionality has been implemented using the following methods:
 
-* [HandleBars + Require] (https://github.com/mcalthrop/profiles/tree/imp/handlebars)
+* HandleBars + Require:
+  * [source] (https://github.com/mcalthrop/profiles/tree/imp/handlebars)
+  * [demo site] (http://www.mattcalthrop.com/portfolio/profiles/)
 * AngularJS (in progress)
-
-## Demo sites
-* [HandleBars + Require] (http://www.mattcalthrop.com/portfolio/profiles/)
 
 View on different devices to see how the design changes (common codebase &ndash; no m-dot).
 
