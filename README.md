@@ -26,7 +26,7 @@ The functionality has been implemented, as git branches from master, using the f
 * HandleBars + Require:
   * [source branch] (https://github.com/mcalthrop/profiles/tree/imp/handlebars)
   * [demo site] (http://www.mattcalthrop.com/portfolio/profiles/handlebars/)
-* AngularJS (in progress):
+* AngularJS _(in progress)_:
   * [source branch] (https://github.com/mcalthrop/profiles/tree/imp/angular)
   * [demo site] (http://www.mattcalthrop.com/portfolio/profiles/angular/)
 
