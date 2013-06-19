@@ -10,6 +10,15 @@ Markup has been styled to be responsive, according to the device used to view th
 
 It is intended as a demonstration of technical capabilities rather than design or helpful data. :-)
 
+Note also that it is a work in progress; for each code branch you can see what features are in the pipeline.
+
+## Functionality
+
+This is a simple application that displays profile information for a list of people.
+
+The sample data is contrived, but shows how the data is stored in JSON format, retrieved via AJAX,
+and inserted into HTML templates.
+
 ## Implementations
 
 The functionality has been implemented using the following methods:
