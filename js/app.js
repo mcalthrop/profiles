@@ -1,9 +1,11 @@
-/* global angular, ProfilesController */
+/* global angular */
 
 angular.module(
-        'ProfilesModule',
+        'MainApp',
         [
-            'ProfilesServices'
+            'AppControllers',
+            'ProfilesServices',
+            'AboutServices'
         ]
     ).config(
         [
@@ -13,7 +15,13 @@ angular.module(
                     '/profiles',
                     {
                         templateUrl: 'partials/profiles/index.html',
-                        controller: ProfilesController
+                        controller: 'ProfilesController'
+                    }
+                ).when(
+                    '/about',
+                    {
+                        templateUrl: 'partials/about/index.html',
+                        controller: 'AboutController'
                     }
                 ).otherwise(
                     {

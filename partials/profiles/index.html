@@ -1,19 +1,13 @@
-<!-- profiles -->
+<!-- {{page.id}} -->
 
-<header>
-    <div class="page-header">
-        <h1>{{wrapper.header.title}}</h1>
-
-        <p ng-repeat="para in wrapper.header.paragraphs" ng-bind-html-unsafe="para">{{para}}</p>
-    </div>
-</header>
+<div ng-include src="'partials/header.html'"></div>
 
 <section>
 
     <div class="profiles-container">
         <ul class="inline">
 
-            <li ng-repeat="profile in profiles" class="profile-container">
+            <li ng-repeat="profile in page.profiles" class="profile-container">
                 <!-- {{profile.name.first}} {{profile.name.last}} -->
                 <span class="profile-header-container">
                     <span class="profile-image-container"><img
@@ -57,14 +51,6 @@
 
 </section>
 
-<footer>
-    <div class="page-footer" ng-bind-html-unsafe="wrapper.footer">
-        {{wrapper.footer}}
-    </div>
-</footer>
+<div ng-include src="'partials/footer.html'"></div>
 
-<div class="page-info">
-    <div class="dimensions" title="current screen dimensions"></div>
-</div>
-
-<!-- / profiles -->
+<!-- / {{page.id}} -->

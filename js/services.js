@@ -8,7 +8,7 @@ angular.module(
             'ngResource'
         ]
     ).factory(
-    'ProfilesService',
+    'ProfilesDataService',
     function ($resource) {
         return $resource(
             'svc/profiles/data.json',
@@ -20,12 +20,43 @@ angular.module(
                 }
             }
         );
-    }
-).factory(
-    'PageWrapperService',
+    }).factory(
+    'ProfilesWrapperService',
     function ($resource) {
         return $resource(
             'svc/profiles/wrapper.json',
+            {},
+            {
+                query: {
+                    method: 'GET'
+                }
+            }
+        );
+    }
+);
+
+angular.module(
+        'AboutServices',
+        [
+            'ngResource'
+        ]
+    ).factory(
+    'AboutWrapperService',
+    function ($resource) {
+        return $resource(
+            'svc/about/wrapper.json',
+            {},
+            {
+                query: {
+                    method: 'GET'
+                }
+            }
+        );
+    }).factory(
+    'AboutDataService',
+    function ($resource) {
+        return $resource(
+            'svc/about/data.json',
             {},
             {
                 query: {

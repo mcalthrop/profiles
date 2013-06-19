@@ -1,0 +1,15 @@
+<!-- {{page.id}} -->
+
+<div ng-include src="'partials/header.html'"></div>
+
+<section>
+
+    <div>
+        <p ng-repeat="para in page.paragraphs">{{para}}</p>
+    </div>
+
+</section>
+
+<div ng-include src="'partials/footer.html'"></div>
+
+<!-- / {{page.id}} -->
