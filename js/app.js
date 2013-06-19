@@ -12,7 +12,7 @@ angular.module(
                 $routeProvider.when(
                     '/profiles',
                     {
-                        templateUrl: 'partials/profiles.html',
+                        templateUrl: 'partials/profiles/index.html',
                         controller: ProfilesController
                     }
                 ).otherwise(

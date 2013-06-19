@@ -11,12 +11,25 @@ angular.module(
     'ProfilesService',
     function ($resource) {
         return $resource(
-            'svc/profiles.json',
+            'svc/profiles/data.json',
             {},
             {
                 query: {
                     method: 'GET',
                     isArray: true
+                }
+            }
+        );
+    }
+).factory(
+    'PageWrapperService',
+    function ($resource) {
+        return $resource(
+            'svc/profiles/wrapper.json',
+            {},
+            {
+                query: {
+                    method: 'GET'
                 }
             }
         );

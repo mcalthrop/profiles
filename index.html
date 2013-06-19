@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:ng="http://angularjs.org">
+<html lang="en">
 <head>
     <title>Profiles [Angular]</title>
 
@@ -17,29 +17,7 @@
 </head>
 <body>
 
-<div class="main-container">
-
-    <header>
-        <div class="page-header">
-        </div>
-    </header>
-
-    <section>
-
-        <div class="profiles-container" ng:view ng:app="ProfilesModule">
-
-        </div>
-
-    </section>
-
-    <footer>
-        <div class="page-footer">
-        </div>
-    </footer>
-
-    <div class="page-info">
-        <div class="dimensions" title="current screen dimensions"></div>
-    </div>
+<div class="main-container" ng-view ng-app="ProfilesModule">
 
 </div>
 
