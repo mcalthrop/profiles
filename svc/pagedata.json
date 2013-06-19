@@ -163,6 +163,24 @@
                 ]
             }
         }
+        ,
+        {
+            "name": {
+                "first": "No overview",
+                "last": "No skills"
+            },
+            "data": {
+                "image": {
+                    "source": "img/thm/humphrey.b.bear.jpg"
+                },
+                "links": [
+                ],
+                "blurb": [
+                ],
+                "skillsMatrix": [
+                ]
+            }
+        }
     ],
     "footer": "&copy; Organisation X 2013 <a href='https://github.com/mcalthrop/portfolio/tree/master/profiles' target='_blank'><br/><small>[source code]</small></a>"
 }
