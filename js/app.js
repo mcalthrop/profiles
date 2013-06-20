@@ -4,6 +4,7 @@ angular.module(
         'MainApp',
         [
             'AppControllers',
+            'AppDirectives',
             'ProfilesServices',
             'AboutServices'
         ]
@@ -14,13 +15,13 @@ angular.module(
                 $routeProvider.when(
                     '/profiles',
                     {
-                        templateUrl: 'partials/profiles/index.html',
+                        templateUrl: 'partials/profiles/main.html',
                         controller: 'ProfilesController'
                     }
                 ).when(
                     '/about',
                     {
-                        templateUrl: 'partials/about/index.html',
+                        templateUrl: 'partials/about/main.html',
                         controller: 'AboutController'
                     }
                 ).otherwise(
