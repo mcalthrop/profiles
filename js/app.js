@@ -15,13 +15,13 @@ angular.module(
                 $routeProvider.when(
                     '/profiles',
                     {
-                        templateUrl: 'partials/profiles/main.html',
+                        templateUrl: 'inc/partials/profiles/main.html',
                         controller: 'ProfilesController'
                     }
                 ).when(
                     '/about',
                     {
-                        templateUrl: 'partials/about/main.html',
+                        templateUrl: 'inc/partials/about/main.html',
                         controller: 'AboutController'
                     }
                 ).otherwise(

@@ -7,7 +7,7 @@ angular.module('AppDirectives', [])
         return {
             restrict: 'E',
             scope: true,
-            templateUrl: 'partials/directives/main-menu.html',
+            templateUrl: 'inc/directives/main-menu.html',
             link: function () {
             }
         };
