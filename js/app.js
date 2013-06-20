@@ -6,7 +6,8 @@ angular.module(
             'AppControllers',
             'AppDirectives',
             'ProfilesServices',
-            'AboutServices'
+            'AboutServices',
+            'MenuServices'
         ]
     ).config(
         [

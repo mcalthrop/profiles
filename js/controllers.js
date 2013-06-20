@@ -44,6 +44,19 @@ angular.module('AppControllers', [])
                 });
             }
         ]
+    )
+    .controller(
+        'MenuController',
+        [
+            '$scope',
+            'MenuDataService',
+            function ($scope, MenuDataService) {
+                $scope.menu = {};
+                MenuDataService.query(function (data) {
+                    $scope.menu.main = data.main;
+                });
+            }
+        ]
     );
 
 /* EOF */

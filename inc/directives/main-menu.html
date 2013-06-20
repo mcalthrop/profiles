@@ -1,9 +1,8 @@
 <!-- main-menu -->
 
-<div class="page-menu">
+<div class="page-menu" ng-controller="MenuController">
     <ul class="inline">
-        <li><a href="#/profiles">home</a></li>
-        <li><a href="#/about">about</a></li>
+        <li ng-repeat="item in menu.main"><a href="{{item.url}}">{{item.text}}</a></li>
     </ul>
 </div>
 
