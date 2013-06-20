@@ -6,7 +6,9 @@
         },
         "data": {
             "image": {
-                "source": "img/thm/richard-branson.jpg"
+                "source": "img/thm/richard-branson.jpg",
+                "alt": "",
+                "title": ""
             },
             "links": [
                 {
@@ -47,7 +49,9 @@
         },
         "data": {
             "image": {
-                "source": "img/thm/barack-obama.jpg"
+                "source": "img/thm/barack-obama.jpg",
+                "alt": "",
+                "title": ""
             },
             "links": [
                 {
@@ -90,7 +94,9 @@
         },
         "data": {
             "image": {
-                "source": "img/thm/marissa-mayer.jpg"
+                "source": "img/thm/marissa-mayer.jpg",
+                "alt": "",
+                "title": ""
             },
             "links": [
                 {
@@ -130,7 +136,9 @@
         },
         "data": {
             "image": {
-                "source": "img/thm/hillary-clinton.jpg"
+                "source": "img/thm/hillary-clinton.jpg",
+                "alt": "",
+                "title": ""
             },
             "links": [
                 {
@@ -156,12 +164,14 @@
     ,
     {
         "name": {
-            "first": "No overview",
-            "last": "No skills"
+            "first": "Humphrey B.",
+            "last": "Bear"
         },
         "data": {
             "image": {
-                "source": "img/thm/humphrey.b.bear.jpg"
+                "source": "img/thm/humphrey.b.bear.jpg",
+                "alt": "This guy has no overview and no skills. And no trousers.",
+                "title": ""
             },
             "links": [
             ],
