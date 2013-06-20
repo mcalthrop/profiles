@@ -8,7 +8,7 @@ https://github.com/mcalthrop/profiles
 This branch uses AngularJS to implement the required functionality in a single-page app.
 
 ## To do:
-- separate out controllers, directives and services into individual files
+- separate out directives into individual files
 - put logic in main-menu so that it sets CSS class according to which item is currently selected
 - work out how to get Angular to process expressions within HTML comments
 - sort out display of bullet points between links (slightly offset)
