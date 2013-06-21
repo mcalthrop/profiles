@@ -4,7 +4,7 @@ define(
     [
         'angular'
     ],
-    function Services(angular) {
+    function AppServices(angular) {
         'use strict';
 
         return angular.module(

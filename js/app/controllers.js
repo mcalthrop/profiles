@@ -4,7 +4,7 @@ define(
     [
         'angular'
     ],
-    function controllers(angular) {
+    function AppControllers(angular) {
         'use strict';
 
         return angular.module(

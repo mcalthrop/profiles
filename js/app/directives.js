@@ -4,7 +4,7 @@ define(
     [
         'angular'
     ],
-    function Directives(angular) {
+    function AppDirectives(angular) {
         'use strict';
 
         return angular.module(
