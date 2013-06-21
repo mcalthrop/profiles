@@ -1,11 +1,20 @@
-/* global angular */
+/* global define */
 
-angular.module(
-    'AppDirectives',
+define(
     [
-        'PageDirectives',
-        'MenuDirectives'
-    ]
+        'angular'
+    ],
+    function Directives(angular) {
+        'use strict';
+
+        return angular.module(
+            'AppDirectives',
+            [
+                'PageDirectives',
+                'MenuDirectives'
+            ]
+        );
+    }
 );
 
 /* EOF */

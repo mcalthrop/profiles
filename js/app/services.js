@@ -1,12 +1,21 @@
-/* global angular */
+/* global define */
 
-angular.module(
-    'AppServices',
+define(
     [
-        'ProfilesServices',
-        'AboutServices',
-        'MenuServices'
-    ]
+        'angular'
+    ],
+    function Services(angular) {
+        'use strict';
+
+        return angular.module(
+            'AppServices',
+            [
+                'ProfilesServices',
+                'AboutServices',
+                'MenuServices'
+            ]
+        );
+    }
 );
 
 /* EOF */

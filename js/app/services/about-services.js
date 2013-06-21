@@ -1,32 +1,41 @@
-/* global angular */
+/* global define */
 
-angular.module(
-        'AboutServices',
-        [
-            'ngResource'
-        ]
-    ).factory(
-    'AboutWrapperService',
-    function ($resource) {
-        return $resource(
-            'svc/about/wrapper.json',
-            {},
-            {
-                query: {
-                    method: 'GET'
-                }
-            }
-        );
-    }).factory(
-    'AboutDataService',
-    function ($resource) {
-        return $resource(
-            'svc/about/data.json',
-            {},
-            {
-                query: {
-                    method: 'GET'
-                }
+define(
+    [
+        'angular'
+    ],
+    function AboutServices(angular) {
+        'use strict';
+
+        return angular.module(
+                'AboutServices',
+                [
+                    'ngResource'
+                ]
+            ).factory(
+            'AboutWrapperService',
+            function ($resource) {
+                return $resource(
+                    'svc/about/wrapper.json',
+                    {},
+                    {
+                        query: {
+                            method: 'GET'
+                        }
+                    }
+                );
+            }).factory(
+            'AboutDataService',
+            function ($resource) {
+                return $resource(
+                    'svc/about/data.json',
+                    {},
+                    {
+                        query: {
+                            method: 'GET'
+                        }
+                    }
+                );
             }
         );
     }

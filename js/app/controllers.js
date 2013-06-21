@@ -1,12 +1,21 @@
-/* global angular */
+/* global define */
 
-angular.module(
-    'AppControllers',
+define(
     [
-        'ProfilesControllers',
-        'AboutControllers',
-        'MenuControllers'
-    ]
+        'angular'
+    ],
+    function controllers(angular) {
+        'use strict';
+
+        return angular.module(
+            'AppControllers',
+            [
+                'ProfilesControllers',
+                'AboutControllers',
+                'MenuControllers'
+            ]
+        );
+    }
 );
 
 /* EOF */
