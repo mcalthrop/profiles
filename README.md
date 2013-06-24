@@ -8,6 +8,7 @@ https://github.com/mcalthrop/profiles
 This branch uses AngularJS to implement the required functionality in a single-page app.
 
 ## To do:
+- create Models that Controllers use - implement as Angular Services
 - implement a new page that has multiple subpages (1, 2, 3, etc)
 - check if site works in IE <= 8
 - use main menu service to store all info required to dynamically generate routes
