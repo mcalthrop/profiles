@@ -10,6 +10,7 @@ define(
         return angular.module(
             'AppModels',
             [
+                'PageModels',
                 'ProfilesModels',
                 'AboutModels',
                 'MenuModels'

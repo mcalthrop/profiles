@@ -8,13 +8,13 @@ define(
         'use strict';
 
         return angular.module('AboutModels', []).factory(
-            'AboutPageModel',
+            'AboutModel',
             function () {
-                var AboutPageModel = {};
+                var AboutModel = {};
 
                 // TODO: complete
 
-                return AboutPageModel;
+                return AboutModel;
             }
         );
     }

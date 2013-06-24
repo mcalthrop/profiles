@@ -20,7 +20,6 @@ define(
 
                             $scope.menuMainModel = MenuMainModel;
                         });
-
                     }
                 ]
             );

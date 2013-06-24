@@ -14,13 +14,14 @@ define(
                     '$scope',
                     'ProfilesDataService',
                     'ProfilesWrapperService',
-                    'ProfilesPageModel',
-                    function ($scope, ProfilesDataService, ProfilesWrapperService, ProfilesPageModel) {
-                        ProfilesPageModel.id = "profiles";
+                    'ProfilesModel',
+                    'PageHeaderModel',
+                    function ($scope, ProfilesDataService, ProfilesWrapperService, ProfilesModel, PageHeaderModel) {
                         ProfilesDataService.query(
                             function (data) {
                                 // if the alt-text for the image is blank, set it to the first + last name
                                 // and if the title text is not set, set it to the alt text
+                                // TODO: this logic could be separated out into a filter
                                 for (var i = 0, len = data.length; i < len; i++) {
                                     var profile = data[i];
                                     var profileName = profile.name;
@@ -33,17 +34,17 @@ define(
                                         profileImage.title = profileImage.alt;
                                     }
                                 }
-                                ProfilesPageModel.profiles = data;
+                                ProfilesModel.profiles = data;
+
+                                $scope.profilesModel = ProfilesModel;
                             }
                         );
                         ProfilesWrapperService.query(
                             function (data) {
-                                ProfilesPageModel.title = data.title;
-                                ProfilesPageModel.header = data.header;
+                                PageHeaderModel.title = data.title;
+                                PageHeaderModel.header = data.header;
                             }
                         );
-
-                        $scope.pageModel = ProfilesPageModel;
                     }
                 ]
             );

@@ -10,6 +10,7 @@ define(
         return angular.module(
             'AppControllers',
             [
+                'PageControllers',
                 'ProfilesControllers',
                 'AboutControllers',
                 'MenuControllers'

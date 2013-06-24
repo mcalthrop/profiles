@@ -14,18 +14,18 @@ define(
                     '$scope',
                     'AboutDataService',
                     'AboutWrapperService',
-                    'AboutPageModel',
-                    function ($scope, AboutDataService, AboutWrapperService, AboutPageModel) {
-                        AboutPageModel.id = "about";
+                    'AboutModel',
+                    'PageHeaderModel',
+                    function ($scope, AboutDataService, AboutWrapperService, AboutModel, PageHeaderModel) {
                         AboutDataService.query(function (data) {
-                            AboutPageModel.paragraphs = data.paragraphs;
+                            AboutModel.paragraphs = data.paragraphs;
+
+                            $scope.aboutModel = AboutModel;
                         });
                         AboutWrapperService.query(function (data) {
-                            AboutPageModel.title = data.title;
-                            AboutPageModel.header = data.header;
+                            PageHeaderModel.title = data.title;
+                            PageHeaderModel.header = data.header;
                         });
-
-                        $scope.pageModel = AboutPageModel;
                     }
                 ]
             );
