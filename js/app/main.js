@@ -11,6 +11,7 @@ define(
                 'MainApp',
                 [
                     'AppControllers',
+                    'AppModels',
                     'AppDirectives',
                     'AppServices'
                 ]

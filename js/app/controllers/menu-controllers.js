@@ -13,11 +13,14 @@ define(
                 [
                     '$scope',
                     'MenuDataService',
-                    function ($scope, MenuDataService) {
-                        $scope.menuModel = {};
+                    'MenuMainModel',
+                    function ($scope, MenuDataService, MenuMainModel) {
                         MenuDataService.query(function (data) {
-                            $scope.menuModel.main = data.main;
+                            MenuMainModel.menuItems = data.main;
+
+                            $scope.menuMainModel = MenuMainModel;
                         });
+
                     }
                 ]
             );
