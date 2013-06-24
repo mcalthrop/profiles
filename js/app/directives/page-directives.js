@@ -14,7 +14,7 @@ define(
                 return {
                     restrict: 'E',
                     scope: true,
-                    templateUrl: 'inc/directives/page-header.html',
+                    templateUrl: 'js/app/directives/page/page-header.html',
                     link: function () {
                     }
                 };
@@ -25,7 +25,7 @@ define(
                 return {
                     restrict: 'E',
                     scope: true,
-                    templateUrl: 'inc/directives/page-footer.html',
+                    templateUrl: 'js/app/directives/page/page-footer.html',
                     link: function () {
                     }
                 };

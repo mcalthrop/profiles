@@ -1,4 +1,4 @@
-/* global require, console */
+/* global require */
 
 require.config(
     {
@@ -60,8 +60,6 @@ require(
 
         domReady(function onDomReady() {
             var $html = angular.element(document).find('html');
-
-            console.log("onDomReady", appMain.name, $html);
 
             //angular.bootstrap($html, [app['name']]);
             angular.bootstrap($html, [appMain.name]);

@@ -21,13 +21,13 @@ define(
                         $routeProvider.when(
                             '/profiles',
                             {
-                                templateUrl: 'inc/partials/profiles/main.html',
+                                templateUrl: 'js/app/views/profiles/profiles-main.html',
                                 controller: 'ProfilesController'
                             }
                         ).when(
                             '/about',
                             {
-                                templateUrl: 'inc/partials/about/main.html',
+                                templateUrl: 'js/app/views/about/about-main.html',
                                 controller: 'AboutController'
                             }
                         ).otherwise(
