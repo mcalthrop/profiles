@@ -18,7 +18,13 @@
 </head>
 <body ng-cloak>
 
-<div class="main-container" ng-view>
+<div class="main-container">
+
+    <pr-page-header></pr-page-header>
+
+    <div ng-view></div>
+
+    <pr-page-footer></pr-page-footer>
 
 </div>
 

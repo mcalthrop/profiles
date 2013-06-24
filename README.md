@@ -8,7 +8,6 @@ https://github.com/mcalthrop/profiles
 This branch uses AngularJS to implement the required functionality in a single-page app.
 
 ## To do:
-- move header and footer into main index.html file
 - implement a new page that has multiple subpages (1, 2, 3, etc)
 - move definition of individual controllers, directives, models and services into separate files
 - check if site works in IE <= 8
