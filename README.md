@@ -8,8 +8,8 @@ https://github.com/mcalthrop/profiles
 This branch uses AngularJS to implement the required functionality in a single-page app.
 
 ## To do:
-- rename directives to include a prefix
 - implement a new page that has multiple subpages (1, 2, 3, etc)
+- check if site works in IE <= 8
 - use main menu service to store all info required to dynamically generate routes
 - put logic in main-menu so that it sets CSS class according to which item is currently selected
 - make page transitions smoother

@@ -9,23 +9,23 @@ define(
 
         return angular.module('PageDirectives', [])
             .directive(
-            'pageHeader',
+            'prPageHeader',
             function factory() {
                 return {
                     restrict: 'E',
                     scope: true,
-                    templateUrl: 'js/app/directives/page/page-header.html',
+                    templateUrl: 'js/app/directives/page/pr-page-header.html',
                     link: function () {
                     }
                 };
             })
             .directive(
-            'pageFooter',
+            'prPageFooter',
             function factory() {
                 return {
                     restrict: 'E',
                     scope: true,
-                    templateUrl: 'js/app/directives/page/page-footer.html',
+                    templateUrl: 'js/app/directives/page/pr-page-footer.html',
                     link: function () {
                     }
                 };

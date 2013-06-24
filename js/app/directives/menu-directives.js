@@ -9,12 +9,12 @@ define(
 
         return angular.module('MenuDirectives', [])
             .directive(
-            'menuMain',
+            'prMenuMain',
             function factory() {
                 return {
                     restrict: 'E',
                     scope: true,
-                    templateUrl: 'js/app/directives/menu/menu-main.html',
+                    templateUrl: 'js/app/directives/menu/pr-menu-main.html',
                     link: function () {
                     }
                 };
