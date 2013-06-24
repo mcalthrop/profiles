@@ -15,8 +15,8 @@ define(
                     'ProfilesDataService',
                     'ProfilesWrapperService',
                     function ($scope, ProfilesDataService, ProfilesWrapperService) {
-                        $scope.page = {};
-                        $scope.page.id = "profiles";
+                        $scope.pageModel = {};
+                        $scope.pageModel.id = "profiles";
                         ProfilesDataService.query(
                             function (data) {
                                 // if the alt-text for the image is blank, set it to the first + last name
@@ -33,13 +33,13 @@ define(
                                         profileImage.title = profileImage.alt;
                                     }
                                 }
-                                $scope.page.profiles = data;
+                                $scope.pageModel.profiles = data;
                             }
                         );
                         ProfilesWrapperService.query(
                             function (data) {
-                                $scope.page.title = data.title;
-                                $scope.page.header = data.header;
+                                $scope.pageModel.title = data.title;
+                                $scope.pageModel.header = data.header;
                             }
                         );
                     }

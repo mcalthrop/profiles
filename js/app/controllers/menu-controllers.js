@@ -14,9 +14,9 @@ define(
                     '$scope',
                     'MenuDataService',
                     function ($scope, MenuDataService) {
-                        $scope.menu = {};
+                        $scope.menuModel = {};
                         MenuDataService.query(function (data) {
-                            $scope.menu.main = data.main;
+                            $scope.menuModel.main = data.main;
                         });
                     }
                 ]
