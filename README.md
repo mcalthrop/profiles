@@ -7,7 +7,11 @@ https://github.com/mcalthrop/profiles
 ## This branch
 This branch uses AngularJS to implement the required functionality in a single-page app.
 
-## To do:
+## Pipeline
+- rearrange source by component instead of layer
+- set up unit testing environment
+- write unit tests for controllers, directives (?), models (TDD) and services
+- set up build environment
 - implement a new page that has multiple subpages (1, 2, 3, etc)
 - check if site works in IE <= 8
 - use main menu service to store all info required to dynamically generate routes
@@ -15,7 +19,6 @@ This branch uses AngularJS to implement the required functionality in a single-p
 - make page transitions smoother
 - work out how to get Angular to process expressions within HTML comments
 - sort out display of bullet points between links (slightly offset)
-- unit testing
 - i18n
 
 ## Demo site
