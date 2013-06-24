@@ -16,7 +16,7 @@ define(
             'AboutWrapperService',
             function ($resource) {
                 return $resource(
-                    'svc/about/wrapper.json',
+                    'svc/about/about-wrapper.json',
                     {},
                     {
                         query: {
@@ -28,7 +28,7 @@ define(
             'AboutDataService',
             function ($resource) {
                 return $resource(
-                    'svc/about/data.json',
+                    'svc/about/about-data.json',
                     {},
                     {
                         query: {

@@ -16,7 +16,7 @@ define(
             'MenuDataService',
             function ($resource) {
                 return $resource(
-                    'svc/menu/data.json',
+                    'svc/menu/menu-data.json',
                     {},
                     {
                         query: {

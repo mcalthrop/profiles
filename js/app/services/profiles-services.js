@@ -16,7 +16,7 @@ define(
             'ProfilesDataService',
             function ($resource) {
                 return $resource(
-                    'svc/profiles/data.json',
+                    'svc/profiles/profiles-data.json',
                     {},
                     {
                         query: {
@@ -29,7 +29,7 @@ define(
             'ProfilesWrapperService',
             function ($resource) {
                 return $resource(
-                    'svc/profiles/wrapper.json',
+                    'svc/profiles/profiles-wrapper.json',
                     {},
                     {
                         query: {
