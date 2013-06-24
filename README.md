@@ -9,7 +9,6 @@ This branch uses AngularJS to implement the required functionality in a single-p
 
 ## To do:
 - implement a new page that has multiple subpages (1, 2, 3, etc)
-- move definition of individual controllers, directives, models and services into separate files
 - check if site works in IE <= 8
 - use main menu service to store all info required to dynamically generate routes
 - put logic in main-menu so that it sets CSS class according to which item is currently selected
