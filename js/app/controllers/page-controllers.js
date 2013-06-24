@@ -7,27 +7,13 @@ define(
     function PageControllers(angular) {
         'use strict';
 
-        return angular.module('PageControllers', [])
-            .controller(
+        return angular.module(
+            'PageControllers',
+            [
                 'PageHeaderController',
-                [
-                    '$scope',
-                    'PageHeaderModel',
-                    function ($scope, PageHeaderModel) {
-                        $scope.pageHeaderModel = PageHeaderModel;
-                    }
-                ]
-            )
-            .controller(
-                'PageFooterController',
-                [
-                    '$scope',
-                    'PageFooterModel',
-                    function ($scope, PageFooterModel) {
-                        $scope.pageFooterModel = PageFooterModel;
-                    }
-                ]
-            );
+                'PageFooterController'
+            ]
+        ) ;
     }
 );
 

@@ -7,24 +7,12 @@ define(
     function PageModels(angular) {
         'use strict';
 
-        return angular.module('PageModels', []).factory(
-            'PageHeaderModel',
-            function () {
-                var PageHeaderModel = {};
-
-                // TODO: complete
-
-                return PageHeaderModel;
-            }
-        ).factory(
-            'PageFooterModel',
-            function () {
-                var PageFooterModel = {};
-
-                // TODO: complete
-
-                return PageFooterModel;
-            }
+        return angular.module(
+            'PageModels',
+            [
+                'PageHeaderModel',
+                'PageFooterModel'
+            ]
         );
     }
 );
