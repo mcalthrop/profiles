@@ -4,12 +4,15 @@ define(
     [
         'angular'
     ],
-    function AboutModels(angular) {
+    function AboutComponents(angular) {
         'use strict';
 
         return angular.module(
-            'AboutModels',
+            'AboutComponents',
             [
+                'AboutController',
+                'AboutDataService',
+                'AboutWrapperService',
                 'AboutModel'
             ]
         );

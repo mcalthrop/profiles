@@ -10,10 +10,8 @@ define(
         return angular.module(
                 'MainApp',
                 [
-                    'AppControllers',
-                    'AppModels',
-                    'AppDirectives',
-                    'AppServices'
+                    'AppComponents',
+                    'AppDirectives'
                 ]
             ).config(
                 [
@@ -22,13 +20,13 @@ define(
                         $routeProvider.when(
                             '/profiles',
                             {
-                                templateUrl: 'js/app/views/profiles/profiles-main.html',
+                                templateUrl: 'js/app/components/profiles/profiles-main.html',
                                 controller: 'ProfilesController'
                             }
                         ).when(
                             '/about',
                             {
-                                templateUrl: 'js/app/views/about/about-main.html',
+                                templateUrl: 'js/app/components/about/about-main.html',
                                 controller: 'AboutController'
                             }
                         ).otherwise(

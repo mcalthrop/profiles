@@ -4,16 +4,18 @@ define(
     [
         'angular'
     ],
-    function PageControllers(angular) {
+    function PageComponents(angular) {
         'use strict';
 
         return angular.module(
-            'PageControllers',
+            'PageComponents',
             [
                 'PageHeaderController',
-                'PageFooterController'
+                'PageFooterController',
+                'PageHeaderModel',
+                'PageFooterModel'
             ]
-        ) ;
+        );
     }
 );
 

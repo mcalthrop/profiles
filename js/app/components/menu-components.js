@@ -4,12 +4,14 @@ define(
     [
         'angular'
     ],
-    function MenuModels(angular) {
+    function MenuComponents(angular) {
         'use strict';
 
         return angular.module(
-            'MenuModels',
+            'MenuComponents',
             [
+                'MenuMainController',
+                'MenuDataService',
                 'MenuMainModel'
             ]
         );
