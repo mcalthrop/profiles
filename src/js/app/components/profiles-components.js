@@ -1,22 +1,13 @@
-/* global define */
+/* global angular */
 
-define(
+angular.module(
+    'ProfilesComponents',
     [
-        'angular'
-    ],
-    function ProfilesComponents(angular) {
-        'use strict';
-
-        return angular.module(
-            'ProfilesComponents',
-            [
-                'ProfilesController',
-                'ProfilesModel',
-                'ProfilesDataService',
-                'ProfilesWrapperService'
-            ]
-        );
-    }
+        'ProfilesController',
+        'ProfilesModel',
+        'ProfilesDataService',
+        'ProfilesWrapperService'
+    ]
 );
 
 /* EOF */

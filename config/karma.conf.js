@@ -1,4 +1,4 @@
-/* global module, REQUIRE, REQUIRE_ADAPTER, JASMINE, JASMINE_ADAPTER */
+/* global module, REQUIRE, REQUIRE_ADAPTER, JASMINE, JASMINE_ADAPTER, LOG_DEBUG */
 /**
  * karma configuration
  */
@@ -59,7 +59,7 @@ colors = true;
 // possible values: karma.LOG_DISABLE || karma.LOG_ERROR || karma.LOG_WARN || karma.LOG_INFO || karma.LOG_DEBUG
 // CLI --log-level debug
 //logLevel = karma.LOG_INFO;
-logLevel = 'debug';
+logLevel = LOG_DEBUG;
 
 // enable / disable watching file and executing tests whenever any file changes
 // CLI --auto-watch --no-auto-watch

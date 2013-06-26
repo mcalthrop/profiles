@@ -1,22 +1,13 @@
-/* global define */
+/* global angular */
 
-define(
+angular.module(
+    'AboutComponents',
     [
-        'angular'
-    ],
-    function AboutComponents(angular) {
-        'use strict';
-
-        return angular.module(
-            'AboutComponents',
-            [
-                'AboutController',
-                'AboutDataService',
-                'AboutWrapperService',
-                'AboutModel'
-            ]
-        );
-    }
+        'AboutController',
+        'AboutDataService',
+        'AboutWrapperService',
+        'AboutModel'
+    ]
 );
 
 /* EOF */

@@ -1,22 +1,13 @@
-/* global define */
+/* global angular */
 
-define(
-    [
-        'angular'
-    ],
-    function ProfilesModel(angular) {
-        'use strict';
+angular.module('ProfilesModel', []).factory(
+    'ProfilesModel',
+    function () {
+        var ProfilesModel = {};
 
-        return angular.module('ProfilesModel', []).factory(
-            'ProfilesModel',
-            function () {
-                var ProfilesModel = {};
+        // TODO: complete
 
-                // TODO: complete
-
-                return ProfilesModel;
-            }
-        );
+        return ProfilesModel;
     }
 );
 

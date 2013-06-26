@@ -1,21 +1,12 @@
-/* global define */
+/* global angular */
 
-define(
+angular.module(
+    'MenuComponents',
     [
-        'angular'
-    ],
-    function MenuComponents(angular) {
-        'use strict';
-
-        return angular.module(
-            'MenuComponents',
-            [
-                'MenuMainController',
-                'MenuDataService',
-                'MenuMainModel'
-            ]
-        );
-    }
+        'MenuMainController',
+        'MenuDataService',
+        'MenuMainModel'
+    ]
 );
 
 /* EOF */

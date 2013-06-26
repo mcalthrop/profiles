@@ -1,22 +1,13 @@
-/* global define */
+/* global angular */
 
-define(
-    [
-        'angular'
-    ],
-    function PageHeaderModel(angular) {
-        'use strict';
+angular.module('PageHeaderModel', []).factory(
+    'PageHeaderModel',
+    function () {
+        var PageHeaderModel = {};
 
-        return angular.module('PageHeaderModel', []).factory(
-            'PageHeaderModel',
-            function () {
-                var PageHeaderModel = {};
+        // TODO: complete
 
-                // TODO: complete
-
-                return PageHeaderModel;
-            }
-        );
+        return PageHeaderModel;
     }
 );
 

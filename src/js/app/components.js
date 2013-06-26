@@ -1,22 +1,13 @@
-/* global define */
+/* global angular */
 
-define(
+angular.module(
+    'AppComponents',
     [
-        'angular'
-    ],
-    function AppComponents(angular) {
-        'use strict';
-
-        return angular.module(
-            'AppComponents',
-            [
-                'AboutComponents',
-                'MenuComponents',
-                'PageComponents',
-                'ProfilesComponents'
-            ]
-        );
-    }
+        'AboutComponents',
+        'MenuComponents',
+        'PageComponents',
+        'ProfilesComponents'
+    ]
 );
 
 /* EOF */

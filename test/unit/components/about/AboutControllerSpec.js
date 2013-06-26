@@ -1,26 +1,13 @@
-/* global console, require, define, describe, it, expect */
+/* global describe, it, expect */
 
-console.log("AboutControllerSpec", require.version);
+describe('just checking', function () {
 
-/*
-define(
-    [
-        'js/app/components/about-controller'
-    ],
-    function (AboutController) {
-        console.log('AboutController:', AboutController);
+    it('works', function () {
 
-        describe('just checking', function () {
+        expect('something').toNotEqual('nothing');
 
-            it('works', function () {
+    });
 
-                expect(true);
-
-            });
-
-        });
-    }
-);
-*/
+});
 
 /* EOF */

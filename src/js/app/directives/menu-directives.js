@@ -1,19 +1,10 @@
-/* global define */
+/* global angular */
 
-define(
+angular.module(
+    'MenuDirectives',
     [
-        'angular'
-    ],
-    function MenuDirectives(angular) {
-        'use strict';
-
-        return angular.module(
-            'MenuDirectives',
-            [
-                'MenuMainDirective'
-            ]
-        );
-    }
+        'MenuMainDirective'
+    ]
 );
 
 /* EOF */

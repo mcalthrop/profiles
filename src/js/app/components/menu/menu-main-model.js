@@ -1,22 +1,13 @@
-/* global define */
+/* global angular */
 
-define(
-    [
-        'angular'
-    ],
-    function MenuMainModel(angular) {
-        'use strict';
+angular.module('MenuMainModel', []).factory(
+    'MenuMainModel',
+    function () {
+        var MenuMainModel = {};
 
-        return angular.module('MenuMainModel', []).factory(
-            'MenuMainModel',
-            function () {
-                var MenuMainModel = {};
+        // TODO: complete
 
-                // TODO: complete
-
-                return MenuMainModel;
-            }
-        );
+        return MenuMainModel;
     }
 );
 

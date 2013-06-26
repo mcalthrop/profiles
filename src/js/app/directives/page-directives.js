@@ -1,20 +1,11 @@
-/* global define */
+/* global angular */
 
-define(
+angular.module(
+    'PageDirectives',
     [
-        'angular'
-    ],
-    function PageDirectives(angular) {
-        'use strict';
-
-        return angular.module(
-            'PageDirectives',
-            [
-                'PageHeaderDirective',
-                'PageFooterDirective'
-            ]
-        );
-    }
+        'PageHeaderDirective',
+        'PageFooterDirective'
+    ]
 );
 
 /* EOF */

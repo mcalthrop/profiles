@@ -1,22 +1,13 @@
-/* global define */
+/* global angular */
 
-define(
-    [
-        'angular'
-    ],
-    function PageFooterModel(angular) {
-        'use strict';
+angular.module('PageFooterModel', []).factory(
+    'PageFooterModel',
+    function () {
+        var PageFooterModel = {};
 
-        return angular.module('PageFooterModel', []).factory(
-            'PageFooterModel',
-            function () {
-                var PageFooterModel = {};
+        // TODO: complete
 
-                // TODO: complete
-
-                return PageFooterModel;
-            }
-        );
+        return PageFooterModel;
     }
 );
 
