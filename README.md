@@ -9,6 +9,7 @@ This branch uses AngularJS to implement the required functionality in a single-p
 
 ## Pipeline
 - write unit tests for controllers, directives (?), models (TDD) and services
+- travis integration
 - set up build environment
 - implement a new page that has multiple subpages (1, 2, 3, etc)
 - check if site works in IE <= 8
