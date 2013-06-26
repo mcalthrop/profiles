@@ -8,7 +8,6 @@ https://github.com/mcalthrop/profiles
 This branch uses AngularJS to implement the required functionality in a single-page app.
 
 ## Pipeline
-- set up unit testing environment
 - write unit tests for controllers, directives (?), models (TDD) and services
 - set up build environment
 - implement a new page that has multiple subpages (1, 2, 3, etc)
