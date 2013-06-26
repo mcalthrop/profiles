@@ -22,3 +22,5 @@ This branch uses AngularJS to implement the required functionality in a single-p
 
 ## Demo site
 http://www.mattcalthrop.com/portfolio/profiles/angular/
+
+This site is kept up to date with the latest code in the codebase.
