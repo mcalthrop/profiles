@@ -10,21 +10,16 @@ basePath = '../';
 files = [
     JASMINE,
     JASMINE_ADAPTER,
-    REQUIRE,
-    REQUIRE_ADAPTER,
 
-    {pattern: 'src/js/lib/angular/1.0.7/angular.js', included: false},
-    {pattern: 'src/js/lib/angular/1.0.7/angular-resource.js', included: false},
+    'src/js/lib/angular/1.1.0/angular.js',
+    'src/js/lib/angular/1.1.0/angular-resource.js',
 
-    {pattern: 'src/js/app/components/*/*.js', included: false},
-    {pattern: 'src/js/app/directives/*/*.js', included: false},
+    'test/lib/angular/1.1.0/angular-mocks.js',
 
-    {pattern: 'test/lib/angular/angular-mocks.js', included: false},
-    {pattern: 'test/lib/angular/angular-scenario.js', included: false},
+    'src/js/app/components/*/*.js',
+    'src/js/app/directives/*/*.js',
 
-    {pattern: 'test/unit/**/*-spec.js', included: false},
-
-    'test/test-main.js'
+    'test/unit/**/*-spec.js'
 ];
 
 // list of files to exclude
@@ -33,7 +28,7 @@ exclude = [];
 // use dolts reporter, as travis terminal does not support escaping sequences
 // possible values: 'dots', 'progress', 'junit', 'teamcity'
 // CLI --reporters progress
-reporters = ['progress', 'junit'];
+reporters = ['junit', 'dots'];
 
 junitReporter = {
     // will be resolved to basePath (in the same way as files/exclude patterns)
@@ -76,7 +71,7 @@ browsers = ['Safari', 'Chrome', 'Firefox'];
 
 // If browser does not capture in given timeout [ms], kill it
 // CLI --capture-timeout 5000
-captureTimeout = 5000;
+captureTimeout = 60000;
 
 // Auto run tests on start (when browsers are captured) and exit
 // CLI --single-run --no-single-run
