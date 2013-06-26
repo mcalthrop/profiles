@@ -16,15 +16,13 @@ files = [
     {pattern: 'src/js/lib/angular/1.0.7/angular.js', included: false},
     {pattern: 'src/js/lib/angular/1.0.7/angular-resource.js', included: false},
 
-    {pattern: 'src/js/app/components/about/about-controller.js', included: false},
-//    {pattern: 'src/js/app/components/*/*.js', included: false},
-//    {pattern: 'src/js/app/directives/*/*.js', included: false},
+    {pattern: 'src/js/app/components/*/*.js', included: false},
+    {pattern: 'src/js/app/directives/*/*.js', included: false},
 
     {pattern: 'test/lib/angular/angular-mocks.js', included: false},
     {pattern: 'test/lib/angular/angular-scenario.js', included: false},
 
-//    {pattern: 'test/unit/**/*Spec.js', included: false},
-    {pattern: 'test/unit/components/about/AboutControllerSpec.js', included: false},
+    {pattern: 'test/unit/**/*-spec.js', included: false},
 
     'test/test-main.js'
 ];
@@ -74,8 +72,7 @@ autoWatch = false;
 // - PhantomJS
 // - IE (only Windows)
 // CLI --browsers Chrome,Firefox,Safari
-//browsers = ['Safari', 'Chrome', 'Firefox'];
-browsers = ['Safari'];
+browsers = ['Safari', 'Chrome', 'Firefox'];
 
 // If browser does not capture in given timeout [ms], kill it
 // CLI --capture-timeout 5000

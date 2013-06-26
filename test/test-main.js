@@ -1,15 +1,14 @@
+/* global require */
 /**
  * Use RequireJS to load our tests.
  */
 
 var tests = [];
 for (var file in window.__karma__.files) {
-    if (/Spec\.js$/.test(file)) {
+    if (/-spec\.js$/.test(file)) {
         tests.push(file);
     }
 }
-
-console.log('test-main.js; require.version:', require.version);
 
 require.config({
     // Karma serves files from '/base'
