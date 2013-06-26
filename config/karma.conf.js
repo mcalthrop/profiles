@@ -19,7 +19,7 @@ files = [
     'src/js/app/components/*/*.js',
     'src/js/app/directives/*/*.js',
 
-    'test/unit/**/*-spec.js'
+    'test/unit/**/*-suite.js'
 ];
 
 // list of files to exclude
