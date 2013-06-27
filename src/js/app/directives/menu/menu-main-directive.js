@@ -1,6 +1,10 @@
 /* global angular */
 
-angular.module('MenuMainDirective', [])
+angular.module(
+        'MenuMainDirectiveModule',
+        [
+        ]
+    )
     .directive(
     'prMenuMain',
     function factory() {

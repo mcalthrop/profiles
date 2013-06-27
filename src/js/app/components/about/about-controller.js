@@ -1,6 +1,10 @@
 /* global angular */
 
-angular.module('AboutController', [])
+angular.module(
+        'AboutControllerModule',
+        [
+        ]
+    )
     .controller(
         'AboutController',
         [

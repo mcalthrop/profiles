@@ -1,6 +1,10 @@
 /* global angular */
 
-angular.module('AboutModel', [])
+angular.module(
+        'AboutModelModule',
+        [
+        ]
+    )
     .factory(
         'AboutModel',
         [

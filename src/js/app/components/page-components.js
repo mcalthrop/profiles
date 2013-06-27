@@ -1,12 +1,12 @@
 /* global angular */
 
 angular.module(
-    'PageComponents',
+    'PageComponentsModule',
     [
-        'PageHeaderController',
-        'PageFooterController',
-        'PageHeaderModel',
-        'PageFooterModel'
+        'PageHeaderControllerModule',
+        'PageFooterControllerModule',
+        'PageHeaderModelModule',
+        'PageFooterModelModule'
     ]
 );
 

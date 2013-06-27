@@ -1,12 +1,12 @@
 /* global angular */
 
 angular.module(
-    'AboutComponents',
+    'AboutComponentsModule',
     [
-        'AboutController',
-        'AboutDataService',
-        'AboutWrapperService',
-        'AboutModel'
+        'AboutControllerModule',
+        'AboutDataServiceModule',
+        'AboutWrapperServiceModule',
+        'AboutModelModule'
     ]
 );
 

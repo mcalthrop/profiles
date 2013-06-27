@@ -1,11 +1,11 @@
 /* global angular */
 
 angular.module(
-    'MenuComponents',
+    'MenuComponentsModule',
     [
-        'MenuMainController',
-        'MenuDataService',
-        'MenuMainModel'
+        'MenuMainControllerModule',
+        'MenuDataServiceModule',
+        'MenuMainModelModule'
     ]
 );
 

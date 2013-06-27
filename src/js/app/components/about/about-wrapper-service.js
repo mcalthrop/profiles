@@ -1,11 +1,12 @@
 /* global angular */
 
 angular.module(
-        'AboutWrapperService',
+        'AboutWrapperServiceModule',
         [
             'ngResource'
         ]
-    ).factory(
+    )
+    .factory(
     'AboutWrapperService',
     function ($resource) {
         return $resource(

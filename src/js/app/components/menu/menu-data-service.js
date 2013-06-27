@@ -1,11 +1,12 @@
 /* global angular */
 
 angular.module(
-        'MenuDataService',
+        'MenuDataServiceModule',
         [
             'ngResource'
         ]
-    ).factory(
+    )
+    .factory(
     'MenuDataService',
     function ($resource) {
         return $resource(

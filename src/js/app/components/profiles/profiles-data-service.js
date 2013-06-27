@@ -1,11 +1,12 @@
 /* global angular */
 
 angular.module(
-        'ProfilesDataService',
+        'ProfilesDataServiceModule',
         [
             'ngResource'
         ]
-    ).factory(
+    )
+    .factory(
     'ProfilesDataService',
     function ($resource) {
         return $resource(

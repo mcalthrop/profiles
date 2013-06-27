@@ -1,6 +1,11 @@
 /* global angular */
 
-angular.module('ProfilesModel', []).factory(
+angular.module(
+        'ProfilesModelModule',
+        [
+        ]
+    )
+    .factory(
     'ProfilesModel',
     function () {
         var ProfilesModel = {};

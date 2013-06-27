@@ -1,11 +1,12 @@
 /* global angular */
 
 angular.module(
-        'ProfilesWrapperService',
+        'ProfilesWrapperServiceModule',
         [
             'ngResource'
         ]
-    ).factory(
+    )
+    .factory(
     'ProfilesWrapperService',
     function ($resource) {
         return $resource(

@@ -1,6 +1,10 @@
 /* global angular */
 
-angular.module('ProfilesController', [])
+angular.module(
+        'ProfilesControllerModule',
+        [
+        ]
+    )
     .controller(
         'ProfilesController',
         [

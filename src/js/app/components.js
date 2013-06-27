@@ -1,12 +1,12 @@
 /* global angular */
 
 angular.module(
-    'AppComponents',
+    'AppComponentsModule',
     [
-        'AboutComponents',
-        'MenuComponents',
-        'PageComponents',
-        'ProfilesComponents'
+        'AboutComponentsModule',
+        'MenuComponentsModule',
+        'PageComponentsModule',
+        'ProfilesComponentsModule'
     ]
 );
 

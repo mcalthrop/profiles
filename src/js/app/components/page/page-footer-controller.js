@@ -1,6 +1,10 @@
 /* global angular */
 
-angular.module('PageFooterController', [])
+angular.module(
+        'PageFooterControllerModule',
+        [
+        ]
+    )
     .controller(
         'PageFooterController',
         [

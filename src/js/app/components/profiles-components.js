@@ -1,12 +1,12 @@
 /* global angular */
 
 angular.module(
-    'ProfilesComponents',
+    'ProfilesComponentsModule',
     [
-        'ProfilesController',
-        'ProfilesModel',
-        'ProfilesDataService',
-        'ProfilesWrapperService'
+        'ProfilesControllerModule',
+        'ProfilesModelModule',
+        'ProfilesDataServiceModule',
+        'ProfilesWrapperServiceModule'
     ]
 );
 

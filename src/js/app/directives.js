@@ -1,10 +1,10 @@
 /* global angular */
 
 angular.module(
-    'AppDirectives',
+    'AppDirectivesModule',
     [
-        'PageDirectives',
-        'MenuDirectives'
+        'PageDirectivesModule',
+        'MenuDirectivesModule'
     ]
 );
 

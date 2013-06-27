@@ -1,6 +1,11 @@
 /* global angular */
 
-angular.module('PageFooterModel', []).factory(
+angular.module(
+        'PageFooterModelModule',
+        [
+        ]
+    )
+    .factory(
     'PageFooterModel',
     function () {
         var PageFooterModel = {};

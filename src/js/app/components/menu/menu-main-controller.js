@@ -1,6 +1,10 @@
 /* global angular */
 
-angular.module('MenuMainController', [])
+angular.module(
+        'MenuMainControllerModule',
+        [
+        ]
+    )
     .controller(
         'MenuMainController',
         [

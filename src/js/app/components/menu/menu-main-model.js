@@ -1,6 +1,11 @@
 /* global angular */
 
-angular.module('MenuMainModel', []).factory(
+angular.module(
+        'MenuMainModelModule',
+        [
+        ]
+    )
+    .factory(
     'MenuMainModel',
     function () {
         var MenuMainModel = {};

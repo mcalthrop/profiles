@@ -1,9 +1,9 @@
 /* global angular */
 
 angular.module(
-    'MenuDirectives',
+    'MenuDirectivesModule',
     [
-        'MenuMainDirective'
+        'MenuMainDirectiveModule'
     ]
 );
 

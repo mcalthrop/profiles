@@ -1,10 +1,10 @@
 /* global angular */
 
 angular.module(
-    'PageDirectives',
+    'PageDirectivesModule',
     [
-        'PageHeaderDirective',
-        'PageFooterDirective'
+        'PageHeaderDirectiveModule',
+        'PageFooterDirectiveModule'
     ]
 );
 

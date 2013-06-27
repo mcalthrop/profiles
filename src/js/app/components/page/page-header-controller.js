@@ -1,6 +1,10 @@
 /* global angular */
 
-angular.module('PageHeaderController', [])
+angular.module(
+        'PageHeaderControllerModule',
+        [
+        ]
+    )
     .controller(
         'PageHeaderController',
         [

@@ -1,6 +1,11 @@
 /* global angular */
 
-angular.module('PageHeaderModel', []).factory(
+angular.module(
+        'PageHeaderModelModule',
+        [
+        ]
+    )
+    .factory(
     'PageHeaderModel',
     function () {
         var PageHeaderModel = {};

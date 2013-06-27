@@ -1,6 +1,10 @@
 /* global angular */
 
-angular.module('PageFooterDirective', [])
+angular.module(
+        'PageFooterDirectiveModule',
+        [
+        ]
+    )
     .directive(
     'prPageFooter',
     function factory() {

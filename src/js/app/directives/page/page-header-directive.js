@@ -1,6 +1,10 @@
 /* global angular */
 
-angular.module('PageHeaderDirective', [])
+angular.module(
+        'PageHeaderDirectiveModule',
+        [
+        ]
+    )
     .directive(
     'prPageHeader',
     function factory() {

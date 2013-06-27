@@ -1,11 +1,12 @@
 /* global angular */
 
 angular.module(
-        'AboutDataService',
+        'AboutDataServiceModule',
         [
             'ngResource'
         ]
-    ).factory(
+    )
+    .factory(
     'AboutDataService',
     function ($resource) {
         return $resource(

@@ -3,8 +3,8 @@
 angular.module(
         'MainApp',
         [
-            'AppComponents',
-            'AppDirectives'
+            'AppComponentsModule',
+            'AppDirectivesModule'
         ]
     ).config(
         [
