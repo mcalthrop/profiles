@@ -8,6 +8,7 @@ https://github.com/mcalthrop/profiles
 This branch uses AngularJS to implement the required functionality in a single-page app.
 
 ## Pipeline
+- append 'Module' to module names
 - write unit tests for controllers, directives (?), models (TDD) and services
 - travis integration
 - set up build environment
