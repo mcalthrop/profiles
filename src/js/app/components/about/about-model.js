@@ -1,14 +1,22 @@
 /* global angular */
 
-angular.module('AboutModel', []).factory(
-    'AboutModel',
-    function () {
-        var AboutModel = {};
+angular.module('AboutModel', [])
+    .factory(
+        'AboutModel',
+        [
+            function () {
+                var _paragraphs = [];
 
-        // TODO: complete
-
-        return AboutModel;
-    }
-);
+                return {
+                    setParagraphs: function (newParagraphs) {
+                        _paragraphs = newParagraphs;
+                    },
+                    getParagraphs: function () {
+                        return _paragraphs;
+                    }
+                };
+            }
+        ]
+    );
 
 /* EOF */

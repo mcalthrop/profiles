@@ -11,7 +11,7 @@ angular.module('AboutController', [])
             'PageHeaderModel',
             function ($scope, AboutDataService, AboutWrapperService, AboutModel, PageHeaderModel) {
                 AboutDataService.query(function (data) {
-                    AboutModel.paragraphs = data.paragraphs;
+                    AboutModel.setParagraphs(data.paragraphs);
 
                     $scope.aboutModel = AboutModel;
                 });
