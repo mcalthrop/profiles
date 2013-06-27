@@ -1,6 +1,7 @@
 /* global describe, it, expect, beforeEach, inject, module, spyOn */
 
 describe('Testing AboutModel:', function () {
+    'use strict';
 
     var modelToTest,
         testParagraphs1 = [
