@@ -26,7 +26,9 @@ describe('Testing AboutController:', function () {
         $httpBackend.expectGET('svc/about/about-data.json').respond(mockAboutDataJson);
 
         mockAboutDataService = jasmine.createSpyObj('mockAboutDataService', ['query']);
-        // TODO: mock what to do when query() is called
+        mockAboutDataService.query.andCallFake(function (fn) {
+            fn(mockAboutDataJson);
+        });
 
         mockAboutWrapperService = jasmine.createSpyObj('mockAboutWrapperService', ['query']);
 
@@ -41,15 +43,31 @@ describe('Testing AboutController:', function () {
         });
     }));
 
-    it('should call data service', function () {
-        expect(mockAboutDataService.query).toHaveBeenCalled();
+    describe('About data:', function () {
+
+        it('should call data service', function () {
+            expect(mockAboutDataService.query).toHaveBeenCalled();
+        });
+
+        it('should call setParagraphs()', function () {
+            expect(mockAboutModel.setParagraphs).toHaveBeenCalled();
+        });
+
+        it('should call setParagraphs() with correct parameters', function () {
+            var mostRecentCallArgs = mockAboutModel.setParagraphs.mostRecentCall.args;
+
+            for (var i = 0, len = mockAboutDataJson.length; i < len; i++) {
+                expect(mostRecentCallArgs[i]).toEqual(mockAboutDataJson[i]);
+            }
+        });
+
+        it('should set aboutModel correctly on controller', function () {
+            expect($scope.aboutModel).toBe(mockAboutModel);
+        });
+
     });
 
-    it('should call wrapper service', function () {
-        expect(mockAboutWrapperService.query).toHaveBeenCalled();
-    });
-
-    // TODO: more tests - need to make sure correct values have been set on models
+    // TODO: complete tests for About Wrapper data
 });
 
 /* EOF */
