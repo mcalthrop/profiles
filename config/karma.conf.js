@@ -19,6 +19,7 @@ files = [
     'src/js/app/components/*/*.js',
     'src/js/app/directives/*/*.js',
 
+    'test/mock/**/mock-*.js',
     'test/unit/**/*-suite.js'
 ];
 
