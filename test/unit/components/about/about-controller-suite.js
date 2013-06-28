@@ -3,23 +3,37 @@
 describe('Testing AboutController:', function () {
     'use strict';
 
-    var controllerToTest,
-        scope,
+    var $controller,
+        $scope,
+        $httpBackend,
+        controllerToTest,
         mockAboutDataService,
+        mockAboutDataJson,
         mockAboutWrapperService,
         mockAboutModel,
         mockPageHeaderModel;
 
-    beforeEach(module('AboutControllerModule'));
+    beforeEach(module('AboutControllerModule', 'MockAboutDataJsonModule'));
 
-    beforeEach(inject(function ($controller, $rootScope) {
-        scope = $rootScope.$new();
-        // TODO: is this the way to do it? ie, mock all the injected parameters?
+    beforeEach(inject(function (_$controller_, _$rootScope_, _$httpBackend_, _MockAboutDataJson_) {
+        $controller = _$controller_;
+
+        $scope = _$rootScope_.$new();
+
+        mockAboutDataJson = _MockAboutDataJson_;
+
+        $httpBackend = _$httpBackend_;
+        $httpBackend.expectGET('svc/about/about-data.json').respond(mockAboutDataJson);
+
         mockAboutDataService = jasmine.createSpyObj('mockAboutDataService', ['query']);
+        // TODO: mock what to do when query() is called
+
         mockAboutWrapperService = jasmine.createSpyObj('mockAboutWrapperService', ['query']);
+
         mockAboutModel = jasmine.createSpyObj('mockAboutModel', ['setParagraphs', 'getParagraphs']);
+
         controllerToTest = $controller('AboutController', {
-            $scope: scope,
+            $scope: $scope,
             AboutDataService: mockAboutDataService,
             AboutWrapperService: mockAboutWrapperService,
             AboutModel: mockAboutModel,
