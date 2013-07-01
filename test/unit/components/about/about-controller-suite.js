@@ -5,7 +5,6 @@ describe('Testing AboutController:', function () {
 
     var $controller,
         $scope,
-        $httpBackend,
         controllerToTest,
         mockAboutDataService,
         mockAboutDataJson,
@@ -15,15 +14,12 @@ describe('Testing AboutController:', function () {
 
     beforeEach(module('AboutControllerModule', 'MockAboutDataJsonModule'));
 
-    beforeEach(inject(function (_$controller_, _$rootScope_, _$httpBackend_, _MockAboutDataJson_) {
+    beforeEach(inject(function (_$controller_, _$rootScope_, _MockAboutDataJson_) {
         $controller = _$controller_;
 
         $scope = _$rootScope_.$new();
 
         mockAboutDataJson = _MockAboutDataJson_;
-
-        $httpBackend = _$httpBackend_;
-        $httpBackend.expectGET('svc/about/about-data.json').respond(mockAboutDataJson);
 
         mockAboutDataService = jasmine.createSpyObj('mockAboutDataService', ['query']);
         mockAboutDataService.query.andCallFake(function (fn) {
