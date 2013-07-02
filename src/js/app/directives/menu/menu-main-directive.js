@@ -11,7 +11,7 @@ angular.module(
         return {
             restrict: 'E',
             scope: true,
-            templateUrl: 'js/app/directives/menu/pr-menu-main.html',
+            templateUrl: 'js/app/directives/menu/pr-menu-main-view.html',
             link: function () {
             }
         };
