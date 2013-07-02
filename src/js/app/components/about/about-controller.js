@@ -15,11 +15,12 @@ angular.module(
             'PageTitleModel',
             'PageHeaderModel',
             function ($scope, AboutDataService, AboutWrapperService, AboutModel, PageTitleModel, PageHeaderModel) {
+                $scope.aboutModel = AboutModel;
+
                 AboutDataService.query(function (data) {
                     AboutModel.setParagraphs(data.paragraphs);
-
-                    $scope.aboutModel = AboutModel;
                 });
+
                 AboutWrapperService.query(function (data) {
                     PageTitleModel.setTitle(data.title);
                     PageHeaderModel.setTitle(data.header.title);

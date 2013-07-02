@@ -15,6 +15,8 @@ angular.module(
             'PageTitleModel',
             'PageHeaderModel',
             function ($scope, ProfilesDataService, ProfilesWrapperService, ProfilesModel, PageTitleModel, PageHeaderModel) {
+                $scope.profilesModel = ProfilesModel;
+
                 ProfilesDataService.query(
                     function (data) {
                         // if the alt-text for the image is blank, set it to the first + last name
@@ -33,8 +35,6 @@ angular.module(
                             }
                         }
                         ProfilesModel.profiles = data;
-
-                        $scope.profilesModel = ProfilesModel;
                     }
                 );
                 ProfilesWrapperService.query(

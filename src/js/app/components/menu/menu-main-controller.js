@@ -12,10 +12,10 @@ angular.module(
             'MenuDataService',
             'MenuMainModel',
             function ($scope, MenuDataService, MenuMainModel) {
+                $scope.menuMainModel = MenuMainModel;
+
                 MenuDataService.query(function (data) {
                     MenuMainModel.menuItems = data.main;
-
-                    $scope.menuMainModel = MenuMainModel;
                 });
             }
         ]
