@@ -12,15 +12,16 @@ angular.module(
             'AboutDataService',
             'AboutWrapperService',
             'AboutModel',
+            'PageTitleModel',
             'PageHeaderModel',
-            function ($scope, AboutDataService, AboutWrapperService, AboutModel, PageHeaderModel) {
+            function ($scope, AboutDataService, AboutWrapperService, AboutModel, PageTitleModel, PageHeaderModel) {
                 AboutDataService.query(function (data) {
                     AboutModel.setParagraphs(data.paragraphs);
 
                     $scope.aboutModel = AboutModel;
                 });
                 AboutWrapperService.query(function (data) {
-                    PageHeaderModel.title = data.title;
+                    PageTitleModel.setTitle(data.title);
                     PageHeaderModel.header = data.header;
                 });
             }

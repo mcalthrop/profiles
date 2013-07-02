@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Profiles [Angular]</title>
+    <title ng-controller="PageTitleController" ng-bind-template="{{pageTitleModel.getTitle()}}">Home</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -46,6 +46,7 @@
             'js/app/main.js' + cacheBusterUri,
 
             'js/app/components.js' + cacheBusterUri,
+
             'js/app/components/about-components.js' + cacheBusterUri,
             'js/app/components/about/about-controller.js' + cacheBusterUri,
             'js/app/components/about/about-data-service.js' + cacheBusterUri,
@@ -58,8 +59,10 @@
             'js/app/components/menu/menu-main-model.js' + cacheBusterUri,
 
             'js/app/components/page-components.js' + cacheBusterUri,
+            'js/app/components/page/page-title-controller.js' + cacheBusterUri,
             'js/app/components/page/page-header-controller.js' + cacheBusterUri,
             'js/app/components/page/page-footer-controller.js' + cacheBusterUri,
+            'js/app/components/page/page-title-model.js' + cacheBusterUri,
             'js/app/components/page/page-header-model.js' + cacheBusterUri,
             'js/app/components/page/page-footer-model.js' + cacheBusterUri,
 

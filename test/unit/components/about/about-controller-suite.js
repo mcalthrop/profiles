@@ -10,6 +10,7 @@ describe('Testing AboutController:', function () {
         mockAboutDataJson,
         mockAboutWrapperService,
         mockAboutModel,
+        mockPageTitleModel,
         mockPageHeaderModel;
 
     beforeEach(module('AboutControllerModule', 'MockAboutDataJsonModule'));
@@ -35,6 +36,7 @@ describe('Testing AboutController:', function () {
             AboutDataService: mockAboutDataService,
             AboutWrapperService: mockAboutWrapperService,
             AboutModel: mockAboutModel,
+            PageTitleModel: mockPageTitleModel,
             PageHeaderModel: mockPageHeaderModel
         });
     }));
