@@ -8,7 +8,6 @@ https://github.com/mcalthrop/profiles
 This branch uses AngularJS to implement the required functionality in a single-page app.
 
 ## Pipeline
-- implement cache-buster
 - set up grunt build environment
 - travis integration
 - complete unit tests for controllers, directives (?), models (TDD) and services
