@@ -8,11 +8,23 @@ angular.module(
     .factory(
     'PageHeaderModel',
     function () {
-        var PageHeaderModel = {};
+        var _title = '',
+            _paragraphs = [];
 
-        // TODO: complete
-
-        return PageHeaderModel;
+        return {
+            setTitle: function (newTitle) {
+                _title = newTitle;
+            },
+            getTitle: function () {
+                return _title;
+            },
+            setParagraphs: function (newParagraphs) {
+                _paragraphs = newParagraphs;
+            },
+            getParagraphs: function () {
+                return _paragraphs;
+            }
+        };
     }
 );
 

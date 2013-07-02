@@ -22,7 +22,8 @@ angular.module(
                 });
                 AboutWrapperService.query(function (data) {
                     PageTitleModel.setTitle(data.title);
-                    PageHeaderModel.header = data.header;
+                    PageHeaderModel.setTitle(data.header.title);
+                    PageHeaderModel.setParagraphs(data.header.paragraphs);
                 });
             }
         ]
