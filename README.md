@@ -8,9 +8,11 @@ https://github.com/mcalthrop/profiles
 This branch uses AngularJS to implement the required functionality in a single-page app.
 
 ## Pipeline
-- write unit tests for controllers, directives (?), models (TDD) and services
+- set up grunt build environment
 - travis integration
-- set up build environment
+- implement cache-buster
+- complete unit tests for controllers, directives (?), models (TDD) and services
+- comment the code!
 - implement a new page that has multiple subpages (1, 2, 3, etc)
 - check if site works in IE <= 8
 - use main menu service to store all info required to dynamically generate routes
