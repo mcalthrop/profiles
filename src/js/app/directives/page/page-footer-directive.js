@@ -11,7 +11,7 @@ angular.module(
         return {
             restrict: 'E',
             scope: true,
-            templateUrl: 'js/app/directives/page/pr-page-footer-view.html',
+            templateUrl: 'js/app/directives/page/page-footer-view.html',
             link: function () {
             }
         };
