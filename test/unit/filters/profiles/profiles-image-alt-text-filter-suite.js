@@ -40,6 +40,15 @@ describe('Testing ProfilesImageAltText filter:', function () {
             expect(filterToTest(textToFilter, nameFirst, nameLast)).toEqual(expectedResult);
         });
 
+        it('should ignore when first name & last name both blank', function () {
+            var textToFilter = 'has something in it',
+                nameFirst = '',
+                nameLast = '',
+                expectedResult = textToFilter;
+
+            expect(filterToTest(textToFilter, nameFirst, nameLast)).toEqual(expectedResult);
+        });
+
     });
 
     describe('when no alt text is supplied', function () {
@@ -79,7 +88,6 @@ describe('Testing ProfilesImageAltText filter:', function () {
 
             expect(filterToTest(textToFilter, nameFirst, nameLast)).toEqual(expectedResult);
         });
-
 
     });
 });
