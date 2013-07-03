@@ -4,8 +4,6 @@ angular.module(
     'AppComponentsModule',
     [
         'AboutComponentsModule',
-        'MenuComponentsModule',
-        'PageComponentsModule',
         'ProfilesComponentsModule'
     ]
 );

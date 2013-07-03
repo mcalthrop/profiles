@@ -3,8 +3,16 @@
 angular.module(
     'PageDirectivesModule',
     [
+        'PageTitleControllerModule',
+        'PageTitleModelModule',
+
         'PageHeaderDirectiveModule',
-        'PageFooterDirectiveModule'
+        'PageHeaderControllerModule',
+        'PageHeaderModelModule',
+
+        'PageFooterDirectiveModule',
+        'PageFooterControllerModule',
+        'PageFooterModelModule'
     ]
 );
 

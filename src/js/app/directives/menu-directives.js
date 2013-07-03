@@ -3,7 +3,10 @@
 angular.module(
     'MenuDirectivesModule',
     [
-        'MenuMainDirectiveModule'
+        'MenuMainDirectiveModule',
+        'MenuMainControllerModule',
+        'MenuDataServiceModule',
+        'MenuMainModelModule'
     ]
 );
 
