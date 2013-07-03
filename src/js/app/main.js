@@ -4,7 +4,8 @@ angular.module(
         'MainApp',
         [
             'AppComponentsModule',
-            'AppDirectivesModule'
+            'AppDirectivesModule',
+            'AppFiltersModule'
         ]
     ).config(
         [

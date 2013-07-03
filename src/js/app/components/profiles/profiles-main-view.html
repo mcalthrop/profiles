@@ -6,12 +6,11 @@
         <ul class="inline">
 
             <li ng-repeat="profile in profilesModel.getProfiles()" class="profile-container">
-                <!-- {{profile.name.first}} {{profile.name.last}} -->
                 <span class="profile-header-container">
                     <span class="profile-image-container"><img
                             ng-src="{{profile.data.image.source}}"
-                            alt="{{profile.data.image.alt}}"
-                            title="{{profile.data.image.title}}" /></span>
+                            alt="{{profile.data.image.alt | ProfilesImageAltText:profile.name.first:profile.name.last}}"
+                            title="{{profile.data.image.alt | ProfilesImageAltText:profile.name.first:profile.name.last}}" /></span>
                     <span class="profile-header">
                         <h2 class="profile-name">{{profile.name.first}}<br>{{profile.name.last}}</h2>
                         <span class="profile-links">

@@ -1,5 +1,11 @@
-'use strict';
+/* global angular */
 
-/* Filters */
+angular.module(
+    'AppFiltersModule',
+    [
+        'ProfilesFiltersModule'
+    ]
+);
 
+/* EOF */
 /* EOF */
