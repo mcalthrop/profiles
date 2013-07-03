@@ -15,7 +15,7 @@ angular.module(
                 $scope.menuMainModel = MenuMainModel;
 
                 MenuDataService.query(function (data) {
-                    MenuMainModel.menuItems = data.main;
+                    MenuMainModel.setMenuItems(data.main);
                 });
             }
         ]

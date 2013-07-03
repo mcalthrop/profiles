@@ -2,7 +2,7 @@
 
 <div class="page-menu" ng-controller="MenuMainController">
     <ul class="inline">
-        <li ng-repeat="item in menuMainModel.menuItems"><a href="{{item.url}}">{{item.text}}</a></li>
+        <li ng-repeat="item in menuMainModel.getMenuItems()"><a href="{{item.url}}">{{item.text}}</a></li>
     </ul>
 </div>
 

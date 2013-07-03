@@ -8,11 +8,16 @@ angular.module(
     .factory(
     'MenuMainModel',
     function () {
-        var MenuMainModel = {};
+        var _menuItems = [];
 
-        // TODO: complete
-
-        return MenuMainModel;
+        return {
+            setMenuItems: function (newMenuItems) {
+                _menuItems = newMenuItems;
+            },
+            getMenuItems: function () {
+                return _menuItems;
+            }
+        };
     }
 );
 
