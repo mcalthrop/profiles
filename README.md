@@ -8,9 +8,11 @@ https://github.com/mcalthrop/profiles
 This branch uses AngularJS to implement the required functionality in a single-page app.
 
 ## Pipeline
+- create a filter for generating the correct alt and title text for a profile image
+- complete unit tests for controllers, directives (?), models (TDD) and services
 - set up grunt build environment
 - travis integration
-- complete unit tests for controllers, directives (?), models (TDD) and services
+- e2e testing
 - comment the code!
 - implement a new page that has multiple subpages (1, 2, 3, etc)
 - check if site works in IE <= 8
