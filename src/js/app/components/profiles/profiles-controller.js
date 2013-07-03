@@ -34,7 +34,7 @@ angular.module(
                                 profileImage.title = profileImage.alt;
                             }
                         }
-                        ProfilesModel.profiles = data;
+                        ProfilesModel.setProfiles(data);
                     }
                 );
                 ProfilesWrapperService.query(

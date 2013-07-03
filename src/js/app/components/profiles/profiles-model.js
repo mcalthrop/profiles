@@ -8,11 +8,16 @@ angular.module(
     .factory(
     'ProfilesModel',
     function () {
-        var ProfilesModel = {};
+        var _profiles = [];
 
-        // TODO: complete
-
-        return ProfilesModel;
+        return {
+            setProfiles: function (newProfiles) {
+                _profiles = newProfiles;
+            },
+            getProfiles: function () {
+                return _profiles;
+            }
+        };
     }
 );
 
