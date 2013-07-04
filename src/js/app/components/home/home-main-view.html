@@ -3,7 +3,7 @@
 <section>
 
     <div>
-        <p ng-repeat="para in homeModel.getParagraphs()">{{para}}</p>
+        <p ng-repeat="para in homeModel.getParagraphs()" ng-bind-html-unsafe="para">{{para}}</p>
     </div>
 
 </section>

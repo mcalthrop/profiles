@@ -1,5 +1,6 @@
 {
     "paragraphs": [
-        "Home page."
+        "This page is a demonstration of a SPA (single-page application) implemented using AngularJS.",
+        "The full source is available on <a href='https://github.com/mcalthrop/profiles/tree/imp/angular'>github</a>."
     ]
 }

@@ -3,6 +3,7 @@
     "header": {
         "title": "Welcome",
         "paragraphs": [
+            "Sample AngularJS SPA"
         ]
     }
 }
