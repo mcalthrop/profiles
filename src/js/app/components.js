@@ -3,8 +3,9 @@
 angular.module(
     'AppComponentsModule',
     [
-        'AboutComponentsModule',
-        'ProfilesComponentsModule'
+        'HomeComponentsModule',
+        'ProfilesComponentsModule',
+        'AboutComponentsModule'
     ]
 );
 

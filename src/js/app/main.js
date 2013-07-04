@@ -12,6 +12,12 @@ angular.module(
             '$routeProvider',
             function ($routeProvider) {
                 $routeProvider.when(
+                    '/home',
+                    {
+                        templateUrl: 'js/app/components/home/home-main-view.html',
+                        controller: 'HomeController'
+                    }
+                ).when(
                     '/profiles',
                     {
                         templateUrl: 'js/app/components/profiles/profiles-main-view.html',
@@ -25,7 +31,7 @@ angular.module(
                     }
                 ).otherwise(
                     {
-                        redirectTo: '/profiles'
+                        redirectTo: '/home'
                     }
                 );
             }

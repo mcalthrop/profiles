@@ -1,8 +1,13 @@
 {
     "main": [
         {
-            "id": "profiles",
+            "id": "home",
             "text": "home",
+            "url": "#/home"
+        },
+        {
+            "id": "profiles",
+            "text": "profiles",
             "url": "#/profiles"
         },
         {
