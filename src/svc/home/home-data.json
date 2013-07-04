@@ -1,6 +1,9 @@
 {
     "paragraphs": [
-        "This page is a demonstration of a SPA (single-page application) implemented using AngularJS.",
+        "This mini-site is a demonstration of a SPA (single-page application) implemented using AngularJS.",
+        "For a more complex page that illustrates responsive web design, see the <a href='#/profiles'>profiles</a> page.",
+        "I have listed a bunch of useful <a href='#/resources'>resources</a> I have found along the way.",
+        "And for further information describing technical capabilities this site illustrates, see <a href='#/about'>about</a>.",
         "The full source is available on <a href='https://github.com/mcalthrop/profiles/tree/imp/angular' target='_blank'>github</a>.",
         "<em>Note:</em> this is a work in progress; you can see <a href=\"https://github.com/mcalthrop/profiles/tree/imp/angular#pipeline\" target=\"_blank\">what's in the pipeline</a>."
     ]
