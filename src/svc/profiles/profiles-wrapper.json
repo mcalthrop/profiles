@@ -1,11 +1,9 @@
 {
-    "title": "Person Profiles",
+    "title": "Profiles",
     "header": {
-        "title": "Person Profiles of Organisation X",
+        "title": "Person Profiles",
         "paragraphs": [
-            "This page shows the profiles of everyone in Organisation X.",
-            "Our motto is simple: <em>Xceeding the average standard</em>.",
-            "We are sure you will agree."
+            "This page demonstrates a slightly more complex (if contrived) AngularJS page implementation."
         ]
     }
 }
