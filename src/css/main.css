@@ -7921,6 +7921,9 @@ h2 {
 li {
   line-height: normal;
 }
+.main-section {
+  margin-top: 24px;
+}
 .profiles-container ul.inline {
   margin: 12px 0 0 0;
 }
@@ -8010,11 +8013,11 @@ li {
   display: none;
 }
 .page-header {
-  margin: 0;
+  margin: 24px 0 0 0;
   padding: 0;
 }
 .page-footer {
-  margin-top: 24px;
+  margin-top: 36px;
   font-family: Verdana, sans-serif;
   font-weight: bold;
   font-size: 0.7em;

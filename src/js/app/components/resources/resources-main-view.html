@@ -1,11 +1,7 @@
 <!-- resources-main-view -->
 
-<section>
-
-    <div>
-        <p ng-repeat="para in resourcesModel.getParagraphs()">{{para}}</p>
-    </div>
-
-</section>
+<div>
+    <p ng-repeat="para in resourcesModel.getParagraphs()" ng-bind-html-unsafe="para">{{para}}</p>
+</div>
 
 <!-- / resources-main-view -->

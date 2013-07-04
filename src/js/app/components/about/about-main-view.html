@@ -1,11 +1,7 @@
 <!-- about-main-view -->
 
-<section>
-
-    <div>
-        <p ng-repeat="para in aboutModel.getParagraphs()">{{para}}</p>
-    </div>
-
-</section>
+<div>
+    <p ng-repeat="para in aboutModel.getParagraphs()" ng-bind-html-unsafe="para">{{para}}</p>
+</div>
 
 <!-- / about-main-view -->

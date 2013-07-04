@@ -8,7 +8,6 @@ https://github.com/mcalthrop/profiles
 This branch uses AngularJS to implement the required functionality in a single-page app.
 
 ## Pipeline
-- create resources page (placeholder)
 - create contact page (placeholder)
 - write unit tests for ProfilesController
 - set up grunt build environment
