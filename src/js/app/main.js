@@ -5,7 +5,8 @@ angular.module(
         [
             'AppComponentsModule',
             'AppDirectivesModule',
-            'AppFiltersModule'
+            'AppFiltersModule',
+            'ui.bootstrap'
         ]
     ).config(
         [
