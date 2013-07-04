@@ -11,6 +11,11 @@
             "url": "#/profiles"
         },
         {
+            "id": "resources",
+            "text": "resources",
+            "url": "#/resources"
+        },
+        {
             "id": "about",
             "text": "about",
             "url": "#/about"

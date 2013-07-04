@@ -24,6 +24,12 @@ angular.module(
                         controller: 'ProfilesController'
                     }
                 ).when(
+                    '/resources',
+                    {
+                        templateUrl: 'js/app/components/resources/resources-main-view.html',
+                        controller: 'ResourcesController'
+                    }
+                ).when(
                     '/about',
                     {
                         templateUrl: 'js/app/components/about/about-main-view.html',

@@ -5,6 +5,7 @@ angular.module(
     [
         'HomeComponentsModule',
         'ProfilesComponentsModule',
+        'ResourcesComponentsModule',
         'AboutComponentsModule'
     ]
 );
