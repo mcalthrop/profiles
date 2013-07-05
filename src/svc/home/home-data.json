@@ -1,6 +1,6 @@
 {
     "paragraphs": [
-        "This mini-site is a demonstration of a <a href='http://en.wikipedia.org/wiki/Single-page_application' target='_blank'>SPA</a> I am creating using AngularJS.",
+        "This mini-site is a demonstration of a <a href='http://en.wikipedia.org/wiki/Single-page_application' target='_blank'>single-page application</a> I am creating using AngularJS.",
         "For a more complex page that illustrates responsive web design, see the <a href='#/profiles'>profiles</a> page.",
         "I have listed a bunch of useful <a href='#/resources'>resources</a> I have found along the way.",
         "And for further information describing technical capabilities this site illustrates, see <a href='#/about'>about</a>.",
