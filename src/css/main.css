@@ -7922,6 +7922,15 @@ h2 {
 li {
   line-height: normal;
 }
+.navbar .divider-vertical {
+  margin: 0;
+}
+.navbar .nav > li > a {
+  padding: 11px 15px 12px;
+}
+.navbar .brand {
+  font-size: 16px;
+}
 .main-section {
   margin-top: 24px;
 }
@@ -8076,6 +8085,20 @@ li {
   body {
     font-size: 12px;
     margin: 6px;
+  }
+  .navbar .navbar-inner {
+    min-height: 0;
+    padding: 0;
+  }
+  .navbar .divider-vertical {
+    height: auto;
+  }
+  .navbar .nav > li > a {
+    padding: 6px 10px 7px;
+  }
+  .navbar .brand {
+    visibility: hidden;
+    display: none;
   }
   .profiles-container > ul.inline > li {
     margin-right: 1px;

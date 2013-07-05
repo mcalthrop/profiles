@@ -42,6 +42,19 @@ li {
     line-height: normal;
 }
 
+// corrections for Bootstrap:
+.navbar {
+    .divider-vertical {
+        margin: 0;
+    }
+    .nav > li > a {
+        padding: 11px 15px 12px;
+    }
+    .brand {
+        font-size: 16px;
+    }
+}
+
 .main-container {
 }
 
@@ -224,6 +237,23 @@ li {
     body {
         font-size: 12px;
         .marginTablet;
+    }
+
+    // corrections for Bootstrap:
+    .navbar {
+        .navbar-inner {
+            min-height: 0;
+            padding: 0;
+        }
+        .divider-vertical {
+            height: auto;
+        }
+        .nav > li > a {
+            padding: 6px 10px 7px;
+        }
+        .brand {
+            .hide;
+        }
     }
 
     .profiles-container > ul.inline > li {
