@@ -1,4 +1,4 @@
-/* global describe, beforeEach, module, inject, jasmine, it, expect */
+/* global describe, beforeEach, module, inject, jasmine, it, expect, spyOn */
 
 describe('Testing HomeController:', function () {
     'use strict';
@@ -6,6 +6,7 @@ describe('Testing HomeController:', function () {
     var $controller,
         $scope,
         controllerToTest,
+        menuMainModel,
         mockHomeDataService,
         mockHomeDataJson,
         mockHomeWrapperService,
@@ -14,12 +15,14 @@ describe('Testing HomeController:', function () {
         mockPageTitleModel,
         mockPageHeaderModel;
 
-    beforeEach(module('HomeControllerModule', 'MockHomeDataJsonModule', 'MockHomeWrapperJsonModule'));
+    beforeEach(module('HomeControllerModule', 'MenuMainModelModule', 'MockHomeDataJsonModule', 'MockHomeWrapperJsonModule'));
 
-    beforeEach(inject(function (_$controller_, _$rootScope_, _MockHomeDataJson_, _MockHomeWrapperJson_) {
+    beforeEach(inject(function (_$controller_, _$rootScope_, MenuMainModel, _MockHomeDataJson_, _MockHomeWrapperJson_) {
         $controller = _$controller_;
 
         $scope = _$rootScope_.$new();
+
+        menuMainModel = MenuMainModel;
 
         mockHomeDataJson = _MockHomeDataJson_;
         mockHomeDataService = jasmine.createSpyObj('mockHomeDataService', ['query']);
@@ -46,8 +49,11 @@ describe('Testing HomeController:', function () {
             ['setTitle', 'getTitle', 'setParagraphs', 'getParagraphs']
         );
 
+        spyOn(menuMainModel, 'setCurrentMenuItemId');
+
         controllerToTest = $controller('HomeController', {
             $scope: $scope,
+            MenuMainModel: menuMainModel,
             HomeDataService: mockHomeDataService,
             HomeWrapperService: mockHomeWrapperService,
             HomeModel: mockHomeModel,
@@ -58,6 +64,10 @@ describe('Testing HomeController:', function () {
 
     it('should set homeModel correctly on $scope', function () {
         expect($scope.homeModel).toBe(mockHomeModel);
+    });
+
+    it('should set current menu item id correctly', function () {
+        expect(menuMainModel.setCurrentMenuItemId).toHaveBeenCalledWith(menuMainModel.HOME);
     });
 
     describe('Home data service:', function () {

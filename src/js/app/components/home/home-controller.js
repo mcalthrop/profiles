@@ -9,13 +9,16 @@ angular.module(
         'HomeController',
         [
             '$scope',
+            'MenuMainModel',
             'HomeDataService',
             'HomeWrapperService',
             'HomeModel',
             'PageTitleModel',
             'PageHeaderModel',
-            function ($scope, HomeDataService, HomeWrapperService, HomeModel, PageTitleModel, PageHeaderModel) {
+            function ($scope, MenuMainModel, HomeDataService, HomeWrapperService, HomeModel, PageTitleModel, PageHeaderModel) {
                 $scope.homeModel = HomeModel;
+
+                MenuMainModel.setCurrentMenuItemId(MenuMainModel.HOME);
 
                 HomeDataService.query(function (data) {
                     HomeModel.setParagraphs(data.paragraphs);
