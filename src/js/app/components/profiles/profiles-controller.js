@@ -9,13 +9,16 @@ angular.module(
         'ProfilesController',
         [
             '$scope',
+            'MenuMainModel',
             'ProfilesDataService',
             'ProfilesWrapperService',
             'ProfilesModel',
             'PageTitleModel',
             'PageHeaderModel',
-            function ($scope, ProfilesDataService, ProfilesWrapperService, ProfilesModel, PageTitleModel, PageHeaderModel) {
+            function ($scope, MenuMainModel, ProfilesDataService, ProfilesWrapperService, ProfilesModel, PageTitleModel, PageHeaderModel) {
                 $scope.profilesModel = ProfilesModel;
+
+                MenuMainModel.setCurrentMenuItemId(MenuMainModel.PROFILES);
 
                 ProfilesDataService.query(
                     function (data) {
