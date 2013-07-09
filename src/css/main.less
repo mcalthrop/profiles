@@ -42,6 +42,15 @@ li {
     line-height: normal;
 }
 
+.view-enter {
+    opacity: 0;
+    .transition(opacity 1s ease-in-out);
+}
+
+.view-enter.view-enter-active {
+    opacity: 1;
+}
+
 // corrections for Bootstrap:
 .navbar {
     .divider-vertical {
