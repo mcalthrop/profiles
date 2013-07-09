@@ -9,13 +9,16 @@ angular.module(
         'AboutController',
         [
             '$scope',
+            'MenuMainModel',
             'AboutDataService',
             'AboutWrapperService',
             'AboutModel',
             'PageTitleModel',
             'PageHeaderModel',
-            function ($scope, AboutDataService, AboutWrapperService, AboutModel, PageTitleModel, PageHeaderModel) {
+            function ($scope, MenuMainModel, AboutDataService, AboutWrapperService, AboutModel, PageTitleModel, PageHeaderModel) {
                 $scope.aboutModel = AboutModel;
+
+                MenuMainModel.setCurrentMenuItemId(MenuMainModel.ABOUT);
 
                 AboutDataService.query(function (data) {
                     AboutModel.setParagraphs(data.paragraphs);

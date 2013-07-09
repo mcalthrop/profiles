@@ -1,4 +1,4 @@
-/* global describe, beforeEach, module, inject, jasmine, it, expect */
+/* global describe, beforeEach, module, inject, jasmine, it, expect, spyOn */
 
 describe('Testing AboutController:', function () {
     'use strict';
@@ -6,6 +6,7 @@ describe('Testing AboutController:', function () {
     var $controller,
         $scope,
         controllerToTest,
+        menuMainModel,
         mockAboutDataService,
         mockAboutDataJson,
         mockAboutWrapperService,
@@ -14,12 +15,14 @@ describe('Testing AboutController:', function () {
         mockPageTitleModel,
         mockPageHeaderModel;
 
-    beforeEach(module('AboutControllerModule', 'MockAboutDataJsonModule', 'MockAboutWrapperJsonModule'));
+    beforeEach(module('AboutControllerModule', 'MenuMainModelModule', 'MockAboutDataJsonModule', 'MockAboutWrapperJsonModule'));
 
-    beforeEach(inject(function (_$controller_, _$rootScope_, _MockAboutDataJson_, _MockAboutWrapperJson_) {
+    beforeEach(inject(function (_$controller_, _$rootScope_, MenuMainModel, _MockAboutDataJson_, _MockAboutWrapperJson_) {
         $controller = _$controller_;
 
         $scope = _$rootScope_.$new();
+
+        menuMainModel = MenuMainModel;
 
         mockAboutDataJson = _MockAboutDataJson_;
         mockAboutDataService = jasmine.createSpyObj('mockAboutDataService', ['query']);
@@ -46,8 +49,11 @@ describe('Testing AboutController:', function () {
             ['setTitle', 'getTitle', 'setParagraphs', 'getParagraphs']
         );
 
+        spyOn(menuMainModel, 'setCurrentMenuItemId');
+
         controllerToTest = $controller('AboutController', {
             $scope: $scope,
+            MenuMainModel: menuMainModel,
             AboutDataService: mockAboutDataService,
             AboutWrapperService: mockAboutWrapperService,
             AboutModel: mockAboutModel,
@@ -58,6 +64,10 @@ describe('Testing AboutController:', function () {
 
     it('should set aboutModel correctly on $scope', function () {
         expect($scope.aboutModel).toBe(mockAboutModel);
+    });
+
+    it('should set current menu item id correctly', function () {
+        expect(menuMainModel.setCurrentMenuItemId).toHaveBeenCalledWith(menuMainModel.ABOUT);
     });
 
     describe('About data service:', function () {
