@@ -11,10 +11,10 @@ files = [
     JASMINE,
     JASMINE_ADAPTER,
 
-    'src/js/lib/angular/1.1.0/angular.js',
-    'src/js/lib/angular/1.1.0/angular-resource.js',
+    'src/js/lib/angular/1.1.5/angular.js',
+    'src/js/lib/angular/1.1.5/angular-resource.js',
 
-    'test/lib/angular/1.1.0/angular-mocks.js',
+    'test/lib/angular/1.1.5/angular-mocks.js',
 
     'src/js/app/components/*/*.js',
     'src/js/app/directives/*/*.js',
