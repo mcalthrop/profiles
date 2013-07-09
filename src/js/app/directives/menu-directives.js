@@ -5,7 +5,6 @@ angular.module(
     [
         'MenuMainDirectiveModule',
         'MenuMainControllerModule',
-        'MenuDataServiceModule',
         'MenuMainModelModule'
     ]
 );

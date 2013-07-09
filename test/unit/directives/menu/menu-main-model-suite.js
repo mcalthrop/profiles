@@ -3,36 +3,7 @@
 describe('Testing MenuMainModel:', function () {
     'use strict';
 
-    var modelToTest,
-        testMenuMainItems1 = [
-            {
-                "id": "id1",
-                "text": "text1",
-                "url": "#/id1"
-            },
-            {
-                "id": "id2",
-                "text": "text2",
-                "url": "#/id2"
-            }
-        ],
-        testMenuMainItems2 = [
-            {
-                "id": "id1.2",
-                "text": "text1.2",
-                "url": "#/id1.2"
-            },
-            {
-                "id": "id2.2",
-                "text": "text2.2",
-                "url": "#/id2.2"
-            },
-            {
-                "id": "id3.2",
-                "text": "text3.2",
-                "url": "#/id3.2"
-            }
-        ];
+    var modelToTest;
 
     beforeEach(module('MenuMainModelModule'));
 
@@ -40,37 +11,44 @@ describe('Testing MenuMainModel:', function () {
         modelToTest = MenuMainModel;
     }));
 
-    describe('menu items setter', function () {
+    describe('current menu item id setter', function () {
 
         it('is passed correct value', function () {
-            spyOn(modelToTest, 'setMenuItems');
-            modelToTest.setMenuItems(testMenuMainItems1);
-            expect(modelToTest.setMenuItems).toHaveBeenCalledWith(testMenuMainItems1);
-        });
+            var testMenuItemId = modelToTest.ABOUT;
 
-        it('should get the correct number of menu items', function () {
-            spyOn(modelToTest, 'setMenuItems');
-            modelToTest.setMenuItems(testMenuMainItems1);
-            expect(modelToTest.setMenuItems.mostRecentCall.args[0].length).toEqual(testMenuMainItems1.length);
+            spyOn(modelToTest, 'setCurrentMenuItemId');
+            modelToTest.setCurrentMenuItemId(testMenuItemId);
+            expect(modelToTest.setCurrentMenuItemId).toHaveBeenCalledWith(testMenuItemId);
         });
 
     });
 
-    describe('menu items getter', function () {
+    describe('current menu item id getter', function () {
 
-        it('should return empty array when no setter called', function () {
-            expect(modelToTest.getMenuItems()).toEqual([]);
+        it('gets correct value on first call', function () {
+            var expectedMenuItemId = modelToTest.HOME;
+
+            expect(modelToTest.getCurrentMenuItemId()).toEqual(expectedMenuItemId);
         });
 
-        it('should return parameters set', function () {
-            modelToTest.setMenuItems(testMenuMainItems1);
-            expect(modelToTest.getMenuItems()).toEqual(testMenuMainItems1);
+        it('gets correct value after single call to setter', function () {
+            var newMenuItemId = modelToTest.ABOUT,
+                expectedMenuItemId = newMenuItemId;
+
+            modelToTest.setCurrentMenuItemId(newMenuItemId);
+            expect(modelToTest.getCurrentMenuItemId()).toEqual(expectedMenuItemId);
         });
 
-        it('should return most recent parameters set', function () {
-            modelToTest.setMenuItems(testMenuMainItems1);
-            modelToTest.setMenuItems(testMenuMainItems2);
-            expect(modelToTest.getMenuItems()).toEqual(testMenuMainItems2);
+        it('gets correct value after multiple calls to setter', function () {
+            var newMenuItemId1 = modelToTest.ABOUT,
+                newMenuItemId2 = modelToTest.PROFILES,
+                newMenuItemId3 = modelToTest.RESOURCES,
+                expectedMenuItemId = newMenuItemId3;
+
+            modelToTest.setCurrentMenuItemId(newMenuItemId1);
+            modelToTest.setCurrentMenuItemId(newMenuItemId2);
+            modelToTest.setCurrentMenuItemId(newMenuItemId3);
+            expect(modelToTest.getCurrentMenuItemId()).toEqual(expectedMenuItemId);
         });
 
     });
