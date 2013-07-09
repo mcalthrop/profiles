@@ -2,7 +2,7 @@
 
 <div class="navbar" ng-controller="MenuMainController">
     <div class="navbar-inner">
-        <a class="brand" href="#">AngularJS SPA Demo</a>
+        <a class="brand" href="#/home">AngularJS SPA Demo</a>
         <ul class="nav">
             <li class="divider-vertical" ng-class="{active: menuMainModel.getCurrentMenuItemId()==item.id}" ng-repeat="item in menuMainModel.getMenuItems()"><a href="{{item.url}}">{{item.text}}</a>
             </li>
