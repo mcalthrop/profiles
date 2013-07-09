@@ -6,21 +6,19 @@ angular.module(
         ]
     )
     .factory(
-        'AboutModel',
-        [
-            function () {
-                var _paragraphs = [];
+    'AboutModel',
+    function () {
+        var _paragraphs = [];
 
-                return {
-                    setParagraphs: function (newParagraphs) {
-                        _paragraphs = newParagraphs;
-                    },
-                    getParagraphs: function () {
-                        return _paragraphs;
-                    }
-                };
+        return {
+            setParagraphs: function (newParagraphs) {
+                _paragraphs = newParagraphs;
+            },
+            getParagraphs: function () {
+                return _paragraphs;
             }
-        ]
-    );
+        };
+    }
+);
 
 /* EOF */
