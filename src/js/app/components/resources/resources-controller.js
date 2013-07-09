@@ -9,13 +9,16 @@ angular.module(
         'ResourcesController',
         [
             '$scope',
+            'MenuMainModel',
             'ResourcesDataService',
             'ResourcesWrapperService',
             'ResourcesModel',
             'PageTitleModel',
             'PageHeaderModel',
-            function ($scope, ResourcesDataService, ResourcesWrapperService, ResourcesModel, PageTitleModel, PageHeaderModel) {
+            function ($scope, MenuMainModel, ResourcesDataService, ResourcesWrapperService, ResourcesModel, PageTitleModel, PageHeaderModel) {
                 $scope.resourcesModel = ResourcesModel;
+
+                MenuMainModel.setCurrentMenuItemId(MenuMainModel.RESOURCES);
 
                 ResourcesDataService.query(function (data) {
                     ResourcesModel.setParagraphs(data.paragraphs);

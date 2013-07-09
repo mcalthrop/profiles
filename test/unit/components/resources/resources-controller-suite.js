@@ -1,4 +1,4 @@
-/* global describe, beforeEach, module, inject, jasmine, it, expect */
+/* global describe, beforeEach, module, inject, jasmine, it, expect, spyOn */
 
 describe('Testing ResourcesController:', function () {
     'use strict';
@@ -6,6 +6,7 @@ describe('Testing ResourcesController:', function () {
     var $controller,
         $scope,
         controllerToTest,
+        menuMainModel,
         mockResourcesDataService,
         mockResourcesDataJson,
         mockResourcesWrapperService,
@@ -14,12 +15,14 @@ describe('Testing ResourcesController:', function () {
         mockPageTitleModel,
         mockPageHeaderModel;
 
-    beforeEach(module('ResourcesControllerModule', 'MockResourcesDataJsonModule', 'MockResourcesWrapperJsonModule'));
+    beforeEach(module('ResourcesControllerModule', 'MenuMainModelModule', 'MockResourcesDataJsonModule', 'MockResourcesWrapperJsonModule'));
 
-    beforeEach(inject(function (_$controller_, _$rootScope_, _MockResourcesDataJson_, _MockResourcesWrapperJson_) {
+    beforeEach(inject(function (_$controller_, _$rootScope_, MenuMainModel, _MockResourcesDataJson_, _MockResourcesWrapperJson_) {
         $controller = _$controller_;
 
         $scope = _$rootScope_.$new();
+
+        menuMainModel = MenuMainModel;
 
         mockResourcesDataJson = _MockResourcesDataJson_;
         mockResourcesDataService = jasmine.createSpyObj('mockResourcesDataService', ['query']);
@@ -46,8 +49,11 @@ describe('Testing ResourcesController:', function () {
             ['setTitle', 'getTitle', 'setParagraphs', 'getParagraphs']
         );
 
+        spyOn(menuMainModel, 'setCurrentMenuItemId');
+
         controllerToTest = $controller('ResourcesController', {
             $scope: $scope,
+            MenuMainModel: menuMainModel,
             ResourcesDataService: mockResourcesDataService,
             ResourcesWrapperService: mockResourcesWrapperService,
             ResourcesModel: mockResourcesModel,
@@ -58,6 +64,10 @@ describe('Testing ResourcesController:', function () {
 
     it('should set resourcesModel correctly on $scope', function () {
         expect($scope.resourcesModel).toBe(mockResourcesModel);
+    });
+
+    it('should set current menu item id correctly', function () {
+        expect(menuMainModel.setCurrentMenuItemId).toHaveBeenCalledWith(menuMainModel.RESOURCES);
     });
 
     describe('Resources data service:', function () {
