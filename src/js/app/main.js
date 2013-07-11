@@ -6,7 +6,7 @@ angular.module(
             'AppComponentsModule',
             'AppDirectivesModule',
             'AppFiltersModule',
-            'ui.bootstrap'
+            'AppLibrariesModule'
         ]
     ).config(
         [
