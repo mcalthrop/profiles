@@ -1,5 +1,23 @@
 /* global angular */
 
+/**
+ * @ngdoc module
+ * @name MenuMainDirectiveModule
+ * @description
+ *
+ * Contains the prMenuMain directive.
+ *
+ */
+
+/**
+ * @ngdoc directive
+ * @name prMenuMain
+ * @description
+ *
+ * Define the prMenuMain directive - set the value of `templateUrl` accordingly
+ *
+ */
+
 angular.module(
         'MenuMainDirectiveModule',
         [
