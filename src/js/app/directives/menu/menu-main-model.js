@@ -62,6 +62,7 @@ angular.module(
             /**
              * @ngdoc property
              * @name MenuMainModel#HOME
+             * @constant
              * @propertyOf MenuMainModel
              * @description The menu id for the home page.
              */
@@ -69,6 +70,7 @@ angular.module(
             /**
              * @ngdoc property
              * @name MenuMainModel#PROFILES
+             * @constant
              * @propertyOf MenuMainModel
              * @description The menu id for the profiles page.
              */
@@ -82,6 +84,7 @@ angular.module(
             RESOURCES: _RESOURCES,
             /**
              * @ngdoc property
+             * @constant
              * @name MenuMainModel#ABOUT
              * @propertyOf MenuMainModel
              * @description The menu id for the about page.
@@ -89,6 +92,7 @@ angular.module(
             ABOUT: _ABOUT,
             /**
              * @ngdoc method
+             * @constant
              * @name MenuMainModel#getCurrentMenuItemId
              * @methodOf MenuMainModel
              * @description
