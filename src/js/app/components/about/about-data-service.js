@@ -1,5 +1,25 @@
 /* global angular */
 
+/**
+ * @ngdoc module
+ * @name AboutDataServiceModule
+ * @requires ngResource
+ * @description
+ *
+ * Define the about data service.
+ *
+ */
+
+/**
+ * @ngdoc service
+ * @name AboutDataService
+ * @requires $resource
+ * @description
+ *
+ * Service to get the data for the about page.
+ *
+ */
+
 angular.module(
         'AboutDataServiceModule',
         [

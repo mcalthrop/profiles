@@ -1,5 +1,34 @@
 /* global angular */
 
+/**
+ * @ngdoc module
+ * @name AboutControllerModule
+ * @description
+ *
+ * Contains the about page controller.
+ *
+ */
+
+/**
+ * @ngdoc controller
+ * @name AboutController
+ * @requires $scope
+ * @requires MenuMainModel
+ * @requires AboutDataService
+ * @requires AboutWrapperService
+ * @requires AboutModel
+ * @requires PageTitleModel
+ * @requires PageHeaderModel
+ * @description
+ *
+ * Controller for the about page:
+ *   - set the model on the controller's `$scope`
+ *   - set the current menu item id
+ *   - call the about data service, and set values on about model accordingly
+ *   - call the about wrapper service, and set the values on the page title and header models accordingly
+ *
+ */
+
 angular.module(
         'AboutControllerModule',
         [

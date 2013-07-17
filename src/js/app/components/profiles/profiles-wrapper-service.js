@@ -1,5 +1,25 @@
 /* global angular */
 
+/**
+ * @ngdoc module
+ * @name ProfilesWrapperServiceModule
+ * @requires ngResource
+ * @description
+ *
+ * Contains the profiles wrapper service.
+ *
+ */
+
+/**
+ * @ngdoc service
+ * @name ProfilesWrapperService
+ * @requires $resource
+ * @description
+ *
+ * Service to get the wrapper for the profiles page.
+ *
+ */
+
 angular.module(
         'ProfilesWrapperServiceModule',
         [
