@@ -8,7 +8,6 @@ https://github.com/mcalthrop/profiles
 This branch uses AngularJS to implement the required functionality in a single-page app.
 
 ## Pipeline
-- comment the code!
 - create contact page (placeholder)
 - implement contact page form
 - set up grunt build environment
