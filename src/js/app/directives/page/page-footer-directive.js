@@ -1,5 +1,23 @@
 /* global angular */
 
+/**
+ * @ngdoc module
+ * @name PageFooterDirectiveModule
+ * @description
+ *
+ * Contains the prPageFooter directive.
+ *
+ */
+
+/**
+ * @ngdoc directive
+ * @name prPageFooter
+ * @description
+ *
+ * Define the prPageFooter directive - set the value of `templateUrl` accordingly
+ *
+ */
+
 angular.module(
         'PageFooterDirectiveModule',
         [

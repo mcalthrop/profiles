@@ -22,44 +22,6 @@
  *
  */
 
-/**
- * @ngdoc method
- * @name MenuMainModel#getCurrentMenuItemId
- * @methodOf MenuMainModel
- * @description
- *
- * Getter for the current menu item id.
- *
- * @returns {String}
- *
- */
-
-/**
- * @ngdoc method
- * @name MenuMainModel#setCurrentMenuItemId
- * @methodOf MenuMainModel
- * @description
- *
- * Setter for the current menu item id.
- *
- * @param {String} newCurrentMenuItemId The new value for current menu item id.
- *      Must be one of the constants provided on this object.
- * @returns {void}
- *
- */
-
-/**
- * @ngdoc method
- * @name MenuMainModel#getMenuItems
- * @methodOf MenuMainModel
- * @description
- *
- * Getter for the array of menu items.
- *
- * @returns {Array}
- *
- */
-
 angular.module(
         'MenuMainModelModule',
         [
@@ -97,16 +59,75 @@ angular.module(
             ];
 
         return {
+            /**
+             * @ngdoc property
+             * @name MenuMainModel#HOME
+             * @propertyOf MenuMainModel
+             * @description The menu id for the home page.
+             */
             HOME: _HOME,
+            /**
+             * @ngdoc property
+             * @name MenuMainModel#PROFILES
+             * @propertyOf MenuMainModel
+             * @description The menu id for the profiles page.
+             */
             PROFILES: _PROFILES,
+            /**
+             * @ngdoc property
+             * @name MenuMainModel#RESOURCES
+             * @propertyOf MenuMainModel
+             * @description The menu id for the resources page.
+             */
             RESOURCES: _RESOURCES,
+            /**
+             * @ngdoc property
+             * @name MenuMainModel#ABOUT
+             * @propertyOf MenuMainModel
+             * @description The menu id for the about page.
+             */
             ABOUT: _ABOUT,
+            /**
+             * @ngdoc method
+             * @name MenuMainModel#getCurrentMenuItemId
+             * @methodOf MenuMainModel
+             * @description
+             *
+             * Getter for the current menu item id.
+             *
+             * @returns {String}
+             *
+             */
             getCurrentMenuItemId: function () {
                 return _currentMenuItemId;
             },
+            /**
+             * @ngdoc method
+             * @name MenuMainModel#setCurrentMenuItemId
+             * @methodOf MenuMainModel
+             * @description
+             *
+             * Setter for the current menu item id.
+             *
+             * @param {String} newCurrentMenuItemId The new value for current menu item id.
+             *      Must be one of the constants provided on this object.
+             * @returns {void}
+             *
+             */
             setCurrentMenuItemId: function (newCurrentMenuItemId) {
                 _currentMenuItemId = newCurrentMenuItemId;
             },
+            /**
+             * @ngdoc method
+             * @name MenuMainModel#getMenuItems
+             * @methodOf MenuMainModel
+             * @description
+             *
+             * Getter for the array of menu items.
+             *
+             * @returns {Array}
+             *
+             */
             getMenuItems: function () {
                 return _menuItems;
             }

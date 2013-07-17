@@ -5,7 +5,7 @@
  * @name AboutModelModule
  * @description
  *
- * Defines AboutModel.
+ * Contains AboutModel.
  *
  */
 
@@ -39,7 +39,7 @@ angular.module(
              * Setter for the paragraphs on the model.
              *
              * @param {Array} newParagraphs The array of paragraphs to set.
-             * @returns void
+             * @returns {void}
              *
              */
             setParagraphs: function (newParagraphs) {

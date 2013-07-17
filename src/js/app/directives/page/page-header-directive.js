@@ -1,5 +1,23 @@
 /* global angular */
 
+/**
+ * @ngdoc module
+ * @name PageHeaderDirectiveModule
+ * @description
+ *
+ * Contains the prPageHeader directive.
+ *
+ */
+
+/**
+ * @ngdoc directive
+ * @name prPageHeader
+ * @description
+ *
+ * Define the prPageHeader directive - set the value of `templateUrl` accordingly
+ *
+ */
+
 angular.module(
         'PageHeaderDirectiveModule',
         [
