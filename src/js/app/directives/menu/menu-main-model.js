@@ -85,8 +85,8 @@ angular.module(
             RESOURCES: _RESOURCES,
             /**
              * @ngdoc property
-             * @constant
              * @name MenuMainModel#ABOUT
+             * @constant
              * @propertyOf MenuMainModel
              * @description The menu id for the about page.
              */
