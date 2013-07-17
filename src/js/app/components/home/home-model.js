@@ -19,31 +19,6 @@
  *
  */
 
-/**
- * @ngdoc method
- * @name HomeModel#setParagraphs
- * @methodOf HomeModel
- * @description
- *
- * Setter for the paragraphs on the model.
- *
- * @param {Array} newParagraphs The array of paragraphs to set.
- * @returns void
- *
- */
-
-/**
- * @ngdoc method
- * @name HomeModel#getParagraphs
- * @methodOf HomeModel
- * @description
- *
- * Getter for the paragraphs on the model.
- *
- * @returns {Array}
- *
- */
-
 angular.module(
         'HomeModelModule',
         [
@@ -55,9 +30,32 @@ angular.module(
         var _paragraphs = [];
 
         return {
+            /**
+             * @ngdoc method
+             * @name HomeModel#setParagraphs
+             * @methodOf HomeModel
+             * @description
+             *
+             * Setter for the paragraphs on the model.
+             *
+             * @param {Array} newParagraphs The array of paragraphs to set.
+             * @returns void
+             *
+             */
             setParagraphs: function (newParagraphs) {
                 _paragraphs = newParagraphs;
             },
+            /**
+             * @ngdoc method
+             * @name HomeModel#getParagraphs
+             * @methodOf HomeModel
+             * @description
+             *
+             * Getter for the paragraphs on the model.
+             *
+             * @returns {Array}
+             *
+             */
             getParagraphs: function () {
                 return _paragraphs;
             }
