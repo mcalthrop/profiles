@@ -78,6 +78,7 @@ angular.module(
             /**
              * @ngdoc property
              * @name MenuMainModel#RESOURCES
+             * @constant
              * @propertyOf MenuMainModel
              * @description The menu id for the resources page.
              */
@@ -92,7 +93,6 @@ angular.module(
             ABOUT: _ABOUT,
             /**
              * @ngdoc method
-             * @constant
              * @name MenuMainModel#getCurrentMenuItemId
              * @methodOf MenuMainModel
              * @description
