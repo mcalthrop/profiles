@@ -3,6 +3,10 @@
 /**
  * @ngdoc module
  * @name ProfilesComponentsModule
+ * @requires ProfilesControllerModule
+ * @requires ProfilesModelModule
+ * @requires ProfilesDataServiceModule
+ * @requires ProfilesWrapperServiceModule
  * @description
  *
  * Loads all components for the profiles page.

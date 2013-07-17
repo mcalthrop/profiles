@@ -3,6 +3,10 @@
 /**
  * @ngdoc module
  * @name AppComponentsModule
+ * @requires HomeComponentsModule
+ * @requires ProfilesComponentsModule
+ * @requires ResourcesComponentsModule
+ * @requires AboutComponentsModule
  * @description
  *
  * Load all components for the application.
