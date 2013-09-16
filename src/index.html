@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title ng-controller="PageTitleController" ng-bind-template="{{pageTitleModel.getTitle()}}">Home</title>
+    <title data-ng-controller="PageTitleController" data-ng-bind-template="{{pageTitleModel.getTitle()}}">Home</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
-        [ng-cloak] {
+        [data-ng-cloak] {
             display: none;
         }
     </style>
@@ -105,7 +105,7 @@
     </script>
 
 </head>
-<body ng-cloak>
+<body data-ng-cloak>
 
 <div class="main-container">
 
@@ -113,7 +113,7 @@
 
     <section class="main-section">
 
-        <div ng-view ng-animate="{enter: 'view-enter'}"></div>
+        <div data-ng-view data-ng-animate="{enter: 'view-enter'}"></div>
 
     </section>
 

@@ -3,17 +3,17 @@
 <div class="profiles-container">
     <ul class="inline">
 
-        <li ng-repeat="profile in profilesModel.getProfiles()" class="profile-container">
+        <li data-ng-repeat="profile in profilesModel.getProfiles()" class="profile-container">
             <span class="profile-header-container">
                 <span class="profile-image-container"><img
-                        ng-src="{{profile.data.image.source}}"
+                        data-ng-src="{{profile.data.image.source}}"
                         alt="{{profile.data.image.alt | ProfilesImageAltText:profile.name.first:profile.name.last}}"
                         title="{{profile.data.image.alt | ProfilesImageAltText:profile.name.first:profile.name.last}}" /></span>
                 <span class="profile-header">
                     <h2 class="profile-name">{{profile.name.first}}<br>{{profile.name.last}}</h2>
                     <span class="profile-links">
                         <ul class="inline">
-                            <li ng-repeat="link in profile.data.links"><a href="{{link.url}}"
+                            <li data-ng-repeat="link in profile.data.links"><a href="{{link.url}}"
                                                                           target="_blank">{{link.text}}</a>
                             </li>
                         </ul>
@@ -23,18 +23,18 @@
 
             <span class="profile-definition">
 
-                <div ng-show="profile.data.blurb">
+                <div data-ng-show="profile.data.blurb">
                     <h3 class="profile-definition-section">OVERVIEW</h3>
                     <span class="profile-blurb">
-                        <p ng-repeat="para in profile.data.blurb" ng-bind-html-unsafe="para">{{para}}</p>
+                        <p data-ng-repeat="para in profile.data.blurb" data-ng-bind-html-unsafe="para">{{para}}</p>
                     </span>
                 </div>
 
-                <div ng-show="profile.data.skillsMatrix">
+                <div data-ng-show="profile.data.skillsMatrix">
                     <h3 class="profile-definition-section">SKILLS</h3>
                     <span class="profile-skills-matrix">
                         <ul class="inline">
-                            <li ng-repeat="skill in profile.data.skillsMatrix">{{skill}}</li>
+                            <li data-ng-repeat="skill in profile.data.skillsMatrix">{{skill}}</li>
                         </ul>
                     </span>
                 </div>
