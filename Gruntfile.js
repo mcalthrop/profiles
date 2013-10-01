@@ -77,6 +77,42 @@ module.exports = function (grunt) {
                 }
             }
         },
+        copy: {
+            dev: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: 'src',
+                        src: [
+                            'css/lib/**',
+                            'img/**',
+                            '**/*.html',
+                            '**/.htaccess',
+                            'svc/**'
+                        ],
+                        dest: 'dist/dev',
+                        filter: 'isFile'
+                    }
+                ]
+            },
+            prod: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: 'src',
+                        src: [
+                            'css/lib/**',
+                            'img/**',
+                            '**/*.html',
+                            '**/.htaccess',
+                            'svc/**'
+                        ],
+                        dest: 'dist/prod',
+                        filter: 'isFile'
+                    }
+                ]
+            }
+        },
         watch: {
             files: [
                 '<%= jshint.files %>',
@@ -92,9 +128,10 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-less');
-    grunt.loadNpmTasks('grunt-karma');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-karma');
 
     grunt.registerTask(
         'test',
@@ -110,7 +147,8 @@ module.exports = function (grunt) {
             'test',
             'less:dev',
             'concat:dev',
-            'uglify:dev'
+            'uglify:dev',
+            'copy:dev'
         ]
     );
 
@@ -120,7 +158,8 @@ module.exports = function (grunt) {
             'test',
             'less:prod',
             'concat:prod',
-            'uglify:prod'
+            'uglify:prod',
+            'copy:prod'
         ]
     );
 
