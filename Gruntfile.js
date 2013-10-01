@@ -13,7 +13,11 @@ module.exports = function (grunt) {
             },
             dev: {
                 src: ['src/js/app/**/*.js'],
-                dest: 'dist/<%= pkg.name %>.js'
+                dest: 'dist/dev/js/<%= pkg.name %>.js'
+            },
+            prod: {
+                src: ['src/js/app/**/*.js'],
+                dest: 'dist/prod/js/<%= pkg.name %>.js'
             }
         },
         uglify: {
@@ -28,7 +32,12 @@ module.exports = function (grunt) {
                     }
                 },
                 files: {
-                    'dist/<%= pkg.name %>.min.js': ['<%= concat.dev.dest %>']
+                    'dist/dev/js/<%= pkg.name %>.min.js': ['<%= concat.dev.dest %>']
+                }
+            },
+            prod: {
+                files: {
+                    'dist/prod/js/<%= pkg.name %>.min.js': ['<%= concat.prod.dest %>']
                 }
             }
         },
@@ -38,7 +47,7 @@ module.exports = function (grunt) {
             },
             dev: {
                 files: {
-                    "src/css/main.css": "src/css/main.less"
+                    "dist/dev/css/main.css": "src/css/main.less"
                 }
             },
             prod: {
@@ -46,7 +55,7 @@ module.exports = function (grunt) {
                     yuicompress: true
                 },
                 files: {
-                    "dist/css/main.css": "src/css/main.less"
+                    "dist/prod/css/main.min.css": "src/css/main.less"
                 }
             }
         },
@@ -96,15 +105,26 @@ module.exports = function (grunt) {
     );
 
     grunt.registerTask(
-        'default',
+        'dev',
         [
-            'jshint',
-            'concat',
-            'uglify',
-            'less',
-            'karma'
+            'test',
+            'less:dev',
+            'concat:dev',
+            'uglify:dev'
         ]
     );
+
+    grunt.registerTask(
+        'prod',
+        [
+            'test',
+            'less:prod',
+            'concat:prod',
+            'uglify:prod'
+        ]
+    );
+
+    grunt.registerTask('default', 'dev');
 };
 
 /* EOF */
