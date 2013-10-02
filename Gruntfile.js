@@ -31,7 +31,7 @@ module.exports = function (grunt) {
         concat: {
             options: {
                 separator: ';',
-                src: ['src/js/app/**/*.js'],
+                src: ['src/js/app/**/*.js']
             },
             dev: {
                 src: ['<%= concat.options.src %>'],
@@ -44,8 +44,7 @@ module.exports = function (grunt) {
         },
         uglify: {
             options: {
-                banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd HH:MM") %> */\n',
-                dest: '<%= env.dev.dest %>/js/<%= pkg.name %>.min.js'
+                banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd HH:MM") %> */\n'
             },
             dev: {
                 options: {
@@ -55,12 +54,12 @@ module.exports = function (grunt) {
                     }
                 },
                 files: {
-                    '<%= uglify.options.dest %>': ['<%= concat.dev.dest %>']
+                    '<%= env.dev.dest %>/js/<%= pkg.name %>.min.js': ['<%= concat.dev.dest %>']
                 }
             },
             prod: {
                 files: {
-                    '<%= uglify.options.dest %>': ['<%= concat.prod.dest %>']
+                    '<%= env.prod.dest %>/js/<%= pkg.name %>.min.js': ['<%= concat.prod.dest %>']
                 }
             }
         },
@@ -135,15 +134,23 @@ module.exports = function (grunt) {
             }
         },
         template: {
+            options: {
+                src: 'src/index.html'
+            },
             dev: {
-                src: '<%= env.dev.dest %>/index.html',
-                dest: '<%= env.dev.dest %>',
-                environment: 'dev'
+                src: '<%= template.options.src %>',
+                dest: '<%= env.dev.dest %>/index.html',
+                options: {
+                    context: {
+                        DEBUG: true
+                    }
+                },
+                environment: '<%= env.dev.name %>'
             },
             prod: {
-                src: '<%= env.prod.dest %>/index.html',
-                dest: '<%= env.prod.dest %>',
-                environment: 'prod'
+                src: '<%= template.options.src %>',
+                dest: '<%= env.prod.dest %>/index.html',
+                environment: '<%= env.prod.name %>'
             }
         },
         watch: {
