@@ -31,35 +31,44 @@ module.exports = function (grunt) {
         concat: {
             options: {
                 separator: ';',
-                src: ['src/js/app/**/*.js']
+                src: ['src/js/app/**/*.js'],
+                dest: 'js/app/<%= pkg.name %>.js'
             },
             dev: {
                 src: ['<%= concat.options.src %>'],
-                dest: '<%= env.dev.dest %>/js/<%= pkg.name %>.js'
+                dest: '<%= env.dev.dest %>/<%= concat.options.dest %>'
             },
             prod: {
                 src: ['<%= concat.options.src %>'],
-                dest: '<%= env.prod.dest %>/js/<%= pkg.name %>.js'
+                dest: '<%= env.prod.dest %>/<%= concat.options.dest %>'
             }
         },
         uglify: {
             options: {
-                banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd HH:MM") %> */\n'
+                banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd HH:MM") %> */\n',
+                report: 'min',
+                dest: 'js/app/<%= pkg.name %>.min.js'
             },
             dev: {
+                src: ['<%= concat.dev.dest %>'],
+                dest: '<%= env.dev.dest %>/<%= uglify.options.dest %>',
                 options: {
                     beautify: {
                         width: 80,
                         beautify: true
-                    }
-                },
-                files: {
-                    '<%= env.dev.dest %>/js/<%= pkg.name %>.min.js': ['<%= concat.dev.dest %>']
+                    },
+                    preserveComments: true,
+                    mangle: false,
+                    compress: false
                 }
             },
             prod: {
-                files: {
-                    '<%= env.prod.dest %>/js/<%= pkg.name %>.min.js': ['<%= concat.prod.dest %>']
+                src: ['<%= concat.prod.dest %>'],
+                dest: '<%= env.prod.dest %>/<%= uglify.options.dest %>',
+                options: {
+                    // Mangling currently produces a JS error, so disable it for the moment
+                    // TODO: fix AngularJS error that causes uglify mangling to produce JS error
+                    mangle: false
                 }
             }
         },
@@ -69,17 +78,15 @@ module.exports = function (grunt) {
                 src: 'src/css/main.less'
             },
             dev: {
-                files: {
-                    '<%= env.dev.dest %>/css/main.css': '<%= less.options.src %>'
-                }
+                src: '<%= less.options.src %>',
+                dest: '<%= env.dev.dest %>/css/main.css'
             },
             prod: {
                 options: {
                     yuicompress: true
                 },
-                files: {
-                    '<%= env.prod.dest %>/css/main.min.css': '<%= less.options.src %>'
-                }
+                src: '<%= less.options.src %>',
+                dest: '<%= env.prod.dest %>/css/main.css'
             }
         },
         karma: {
@@ -103,6 +110,7 @@ module.exports = function (grunt) {
         copy: {
             options: {
                 src: [
+                    'js/lib/**',
                     'css/lib/**',
                     'img/**',
                     '**/*.html',
@@ -111,26 +119,18 @@ module.exports = function (grunt) {
                 ]
             },
             dev: {
-                files: [
-                    {
-                        expand: true,
-                        cwd: 'src',
-                        src: '<%= copy.options.src %>',
-                        dest: '<%= env.dev.dest %>',
-                        filter: 'isFile'
-                    }
-                ]
+                expand: true,
+                cwd: 'src',
+                src: '<%= copy.options.src %>',
+                dest: '<%= env.dev.dest %>',
+                filter: 'isFile'
             },
             prod: {
-                files: [
-                    {
-                        expand: true,
-                        cwd: 'src',
-                        src: '<%= copy.options.src %>',
-                        dest: '<%= env.prod.dest %>',
-                        filter: 'isFile'
-                    }
-                ]
+                expand: true,
+                cwd: 'src',
+                src: '<%= copy.options.src %>',
+                dest: '<%= env.prod.dest %>',
+                filter: 'isFile'
             }
         },
         template: {
@@ -140,17 +140,16 @@ module.exports = function (grunt) {
             dev: {
                 src: '<%= template.options.src %>',
                 dest: '<%= env.dev.dest %>',
-                options: {
-                    context: {
-                        DEBUG: true
-                    }
-                },
-                environment: '<%= env.dev.name %>'
+                env: '<%= env.dev.name %>',
+                debugjs: true,
+                mainjs: '<%= concat.options.dest %>'    // for dev, use the non-uglified version
             },
             prod: {
                 src: '<%= template.options.src %>',
                 dest: '<%= env.prod.dest %>',
-                environment: '<%= env.prod.name %>'
+                env: '<%= env.prod.name %>',
+                debugjs: false,
+                mainjs: '<%= uglify.options.dest %>'    // and for prod, the uglified version
             }
         },
         watch: {
