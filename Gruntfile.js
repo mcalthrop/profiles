@@ -28,19 +28,18 @@ module.exports = function (grunt) {
                 src: ['dist']
             }
         },
-        concat: {
+        ngmin: {
             options: {
-                separator: ';',
                 src: ['src/js/app/**/*.js'],
-                dest: 'js/app/<%= pkg.name %>.js'
+                dest: 'js/app/<%= pkg.name %>.ngmin.js'
             },
             dev: {
-                src: ['<%= concat.options.src %>'],
-                dest: '<%= env.dev.dest %>/<%= concat.options.dest %>'
+                src: '<%= ngmin.options.src %>',
+                dest: '<%= env.dev.dest %>/<%= ngmin.options.dest %>'
             },
             prod: {
-                src: ['<%= concat.options.src %>'],
-                dest: '<%= env.prod.dest %>/<%= concat.options.dest %>'
+                src: '<%= ngmin.options.src %>',
+                dest: '<%= env.prod.dest %>/<%= ngmin.options.dest %>'
             }
         },
         uglify: {
@@ -50,7 +49,7 @@ module.exports = function (grunt) {
                 dest: 'js/app/<%= pkg.name %>.min.js'
             },
             dev: {
-                src: ['<%= concat.dev.dest %>'],
+                src: ['<%= ngmin.dev.dest %>'],
                 dest: '<%= env.dev.dest %>/<%= uglify.options.dest %>',
                 options: {
                     beautify: {
@@ -63,13 +62,8 @@ module.exports = function (grunt) {
                 }
             },
             prod: {
-                src: ['<%= concat.prod.dest %>'],
-                dest: '<%= env.prod.dest %>/<%= uglify.options.dest %>',
-                options: {
-                    // Mangling currently produces a JS error, so disable it for the moment
-                    // TODO: fix AngularJS error that causes uglify mangling to produce JS error
-                    mangle: false
-                }
+                src: ['<%= ngmin.prod.dest %>'],
+                dest: '<%= env.prod.dest %>/<%= uglify.options.dest %>'
             }
         },
         less: {
@@ -142,7 +136,7 @@ module.exports = function (grunt) {
                 dest: '<%= env.dev.dest %>',
                 env: '<%= env.dev.name %>',
                 debugjs: true,
-                mainjs: '<%= concat.options.dest %>'    // for dev, use the non-uglified version
+                mainjs: '<%= ngmin.options.dest %>'    // for dev, use the ng-minified version
             },
             prod: {
                 src: '<%= template.options.src %>',
@@ -168,11 +162,11 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-hustler');
     grunt.loadNpmTasks('grunt-karma');
+    grunt.loadNpmTasks('grunt-ngmin');
 
     grunt.registerTask(
         'test',
@@ -188,7 +182,7 @@ module.exports = function (grunt) {
             'clean:dev',
             'jshint',
             'less:dev',
-            'concat:dev',
+            'ngmin:dev',
             'uglify:dev',
             'copy:dev',
             'template:dev'
@@ -201,7 +195,7 @@ module.exports = function (grunt) {
             'clean:prod',
             'test',
             'less:prod',
-            'concat:prod',
+            'ngmin:prod',
             'uglify:prod',
             'copy:prod',
             'template:prod'
