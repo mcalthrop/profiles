@@ -13,6 +13,12 @@
 
     <link rel="stylesheet" type="text/css" href="css/main.css" />
 
+    <% if (config.environment && config.environment === 'prod') { %>
+        <!-- PROD -->
+    <% } else { %>
+        <!-- DEV -->
+    <% } %>
+
     <!-- I don't like doing this, but it's the Angular way of async file loading -->
 
     <script>
