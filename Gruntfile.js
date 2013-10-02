@@ -139,7 +139,7 @@ module.exports = function (grunt) {
             },
             dev: {
                 src: '<%= template.options.src %>',
-                dest: '<%= env.dev.dest %>/index.html',
+                dest: '<%= env.dev.dest %>',
                 options: {
                     context: {
                         DEBUG: true
@@ -149,7 +149,7 @@ module.exports = function (grunt) {
             },
             prod: {
                 src: '<%= template.options.src %>',
-                dest: '<%= env.prod.dest %>/index.html',
+                dest: '<%= env.prod.dest %>',
                 environment: '<%= env.prod.name %>'
             }
         },
