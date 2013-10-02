@@ -7,17 +7,27 @@ module.exports = function (grunt) {
     // Project configuration
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        env: {
+            dev: {
+                env: 'dev',
+                dest: 'dist/dev'
+            },
+            prod: {
+                env: 'prod',
+                dest: 'dist/prod'
+            }
+        },
         concat: {
             options: {
                 separator: ';'
             },
             dev: {
                 src: ['src/js/app/**/*.js'],
-                dest: 'dist/dev/js/<%= pkg.name %>.js'
+                dest: '<%= env.dev.dest %>/js/<%= pkg.name %>.js'
             },
             prod: {
                 src: ['src/js/app/**/*.js'],
-                dest: 'dist/prod/js/<%= pkg.name %>.js'
+                dest: '<%= env.prod.dest %>/js/<%= pkg.name %>.js'
             }
         },
         uglify: {
@@ -32,12 +42,12 @@ module.exports = function (grunt) {
                     }
                 },
                 files: {
-                    'dist/dev/js/<%= pkg.name %>.min.js': ['<%= concat.dev.dest %>']
+                    '<%= env.dev.dest %>/js/<%= pkg.name %>.min.js': ['<%= concat.dev.dest %>']
                 }
             },
             prod: {
                 files: {
-                    'dist/prod/js/<%= pkg.name %>.min.js': ['<%= concat.prod.dest %>']
+                    '<%= env.prod.dest %>/js/<%= pkg.name %>.min.js': ['<%= concat.prod.dest %>']
                 }
             }
         },
@@ -47,7 +57,7 @@ module.exports = function (grunt) {
             },
             dev: {
                 files: {
-                    "dist/dev/css/main.css": "src/css/main.less"
+                    "<%= env.dev.dest %>/css/main.css": "src/css/main.less"
                 }
             },
             prod: {
@@ -55,7 +65,7 @@ module.exports = function (grunt) {
                     yuicompress: true
                 },
                 files: {
-                    "dist/prod/css/main.min.css": "src/css/main.less"
+                    "<%= env.prod.dest %>/css/main.min.css": "src/css/main.less"
                 }
             }
         },
@@ -90,7 +100,7 @@ module.exports = function (grunt) {
                             '**/.htaccess',
                             'svc/**'
                         ],
-                        dest: 'dist/dev',
+                        dest: '<%= env.dev.dest %>',
                         filter: 'isFile'
                     }
                 ]
@@ -107,7 +117,7 @@ module.exports = function (grunt) {
                             '**/.htaccess',
                             'svc/**'
                         ],
-                        dest: 'dist/prod',
+                        dest: '<%= env.prod.dest %>',
                         filter: 'isFile'
                     }
                 ]
@@ -144,7 +154,7 @@ module.exports = function (grunt) {
     grunt.registerTask(
         'dev',
         [
-            'test',
+            'jshint',
             'less:dev',
             'concat:dev',
             'uglify:dev',
