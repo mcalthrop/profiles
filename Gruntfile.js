@@ -134,6 +134,18 @@ module.exports = function (grunt) {
                 ]
             }
         },
+        template: {
+            dev: {
+                src: '<%= env.dev.dest %>/index.html',
+                dest: '<%= env.dev.dest %>',
+                environment: 'dev'
+            },
+            prod: {
+                src: '<%= env.prod.dest %>/index.html',
+                dest: '<%= env.prod.dest %>',
+                environment: 'prod'
+            }
+        },
         watch: {
             files: [
                 '<%= jshint.files %>',
@@ -153,6 +165,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-hustler');
     grunt.loadNpmTasks('grunt-karma');
 
     grunt.registerTask(
@@ -171,7 +184,8 @@ module.exports = function (grunt) {
             'less:dev',
             'concat:dev',
             'uglify:dev',
-            'copy:dev'
+            'copy:dev',
+            'template:dev'
         ]
     );
 
@@ -183,7 +197,8 @@ module.exports = function (grunt) {
             'less:prod',
             'concat:prod',
             'uglify:prod',
-            'copy:prod'
+            'copy:prod',
+            'template:prod'
         ]
     );
 
