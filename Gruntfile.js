@@ -9,12 +9,23 @@ module.exports = function (grunt) {
         pkg: grunt.file.readJSON('package.json'),
         env: {
             dev: {
-                env: 'dev',
+                name: 'dev',
                 dest: 'dist/dev'
             },
             prod: {
-                env: 'prod',
+                name: 'prod',
                 dest: 'dist/prod'
+            }
+        },
+        clean: {
+            dev: {
+                src: ['<%= env.dev.dest %>']
+            },
+            prod: {
+                src: ['<%= env.prod.dest %>']
+            },
+            all: {
+                src: ['dist']
             }
         },
         concat: {
@@ -141,6 +152,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-karma');
 
     grunt.registerTask(
@@ -154,6 +166,7 @@ module.exports = function (grunt) {
     grunt.registerTask(
         'dev',
         [
+            'clean:dev',
             'jshint',
             'less:dev',
             'concat:dev',
@@ -165,6 +178,7 @@ module.exports = function (grunt) {
     grunt.registerTask(
         'prod',
         [
+            'clean:prod',
             'test',
             'less:prod',
             'concat:prod',
