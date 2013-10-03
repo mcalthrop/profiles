@@ -213,8 +213,8 @@ module.exports = function (grunt) {
             'ngmin:prod',
             'uglify:prod',
             'copy:prod',
-            'template:prod',
-            'ngdocs'
+            'template:prod'
+//            'ngdocs'              // TODO: reinstate once the outstanding ngdocs issue has been resolved
         ]
     );
 
