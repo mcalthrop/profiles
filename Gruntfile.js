@@ -23,7 +23,10 @@ module.exports = function (grunt) {
                 src: ['<%= env.dev.dest %>']
             },
             prod: {
-                src: ['<%= env.prod.dest %>', '<%= ngdocs.options.dest %>']
+                src: ['<%= env.prod.dest %>']
+            },
+            docs: {
+                src: ['<%= ngdocs.options.dest %>']
             },
             all: {
                 src: '<%= env.dist %>'
@@ -214,9 +217,12 @@ module.exports = function (grunt) {
             'uglify:prod',
             'copy:prod',
             'template:prod'
+//            'clean:docs',
 //            'ngdocs'              // TODO: reinstate once the outstanding ngdocs issue has been resolved
         ]
     );
+
+    grunt.registerTask('docs', 'ngdocs');
 
     grunt.registerTask('default', 'dev');
 };
