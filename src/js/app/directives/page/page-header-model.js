@@ -40,7 +40,7 @@ angular.module(
              * Setter for the title in the page header.
              *
              * @param {String} newTitle The new value for the page header title.
-             * @returns {void}
+             * @returns {void} void
              *
              */
             setTitle: function (newTitle) {
@@ -54,7 +54,7 @@ angular.module(
              *
              * Getter for the title in the page header.
              *
-             * @returns {String}
+             * @returns {String} Page header title
              *
              */
             getTitle: function () {
@@ -69,7 +69,7 @@ angular.module(
              * Setter for the paragraphs in the page header.
              *
              * @param {Array} newParagraphs The new value for the page header paragraphs.
-             * @returns {void}
+             * @returns {void} void
              *
              */
             setParagraphs: function (newParagraphs) {
@@ -83,7 +83,7 @@ angular.module(
              *
              * Getter for the paragraphs in the page header.
              *
-             * @returns {String}
+             * @returns {Array} Array of page header paragraphs
              *
              */
             getParagraphs: function () {

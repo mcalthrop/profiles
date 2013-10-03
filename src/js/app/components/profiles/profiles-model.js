@@ -39,7 +39,8 @@ angular.module(
              * Setter for the profiles on the model.
              *
              * @param {Array} newProfiles The array of profiles to set.
-             * @returns {void}
+             *
+             * @returns {void} void
              *
              */
             setProfiles: function (newProfiles) {
@@ -53,7 +54,7 @@ angular.module(
              *
              * Getter for the profiles on the model.
              *
-             * @returns {Array}
+             * @returns {Array} The array of profiles.
              *
              */
             getProfiles: function () {

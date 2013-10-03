@@ -99,7 +99,7 @@ angular.module(
              *
              * Getter for the current menu item id.
              *
-             * @returns {String}
+             * @returns {String} The current menu id
              *
              */
             getCurrentMenuItemId: function () {
@@ -115,7 +115,7 @@ angular.module(
              *
              * @param {String} newCurrentMenuItemId The new value for current menu item id.
              *      Must be one of the constants provided on this object.
-             * @returns {void}
+             * @returns {void} void
              *
              */
             setCurrentMenuItemId: function (newCurrentMenuItemId) {
@@ -129,7 +129,7 @@ angular.module(
              *
              * Getter for the array of menu items.
              *
-             * @returns {Array}
+             * @returns {Array} The array of menu items
              *
              */
             getMenuItems: function () {

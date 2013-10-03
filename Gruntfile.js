@@ -8,13 +8,14 @@ module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         env: {
+            dist: 'dist',       // main distribution directory
             dev: {
                 name: 'dev',
-                dest: 'dist/dev'
+                dest: '<%= env.dist %>/dev'
             },
             prod: {
                 name: 'prod',
-                dest: 'dist/prod'
+                dest: '<%= env.dist %>/prod'
             }
         },
         clean: {
@@ -22,10 +23,10 @@ module.exports = function (grunt) {
                 src: ['<%= env.dev.dest %>']
             },
             prod: {
-                src: ['<%= env.prod.dest %>']
+                src: ['<%= env.prod.dest %>', '<%= ngdocs.options.dest %>']
             },
             all: {
-                src: ['dist']
+                src: '<%= env.dist %>'
             }
         },
         ngmin: {
@@ -136,7 +137,7 @@ module.exports = function (grunt) {
                 dest: '<%= env.dev.dest %>',
                 env: '<%= env.dev.name %>',
                 debugjs: true,
-                mainjs: '<%= ngmin.options.dest %>'    // for dev, use the ng-minified version
+                mainjs: '<%= ngmin.options.dest %>'     // for dev, use the ng-minified version
             },
             prod: {
                 src: '<%= template.options.src %>',
@@ -144,6 +145,19 @@ module.exports = function (grunt) {
                 env: '<%= env.prod.name %>',
                 debugjs: false,
                 mainjs: '<%= uglify.options.dest %>'    // and for prod, the uglified version
+            }
+        },
+        ngdocs: {
+            options: {
+                dest: '<%= env.dist %>/docs',
+                html5Mode: true,
+                title: '<%= pkg.name %>',
+                titleLink: '/api',
+                startPage: '/api',
+                bestMatch: true
+            },
+            all: {
+                src: '<%= ngmin.options.src %>'
             }
         },
         watch: {
@@ -167,6 +181,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-hustler');
     grunt.loadNpmTasks('grunt-karma');
     grunt.loadNpmTasks('grunt-ngmin');
+    grunt.loadNpmTasks('grunt-ngdocs');
 
     grunt.registerTask(
         'test',
@@ -198,7 +213,8 @@ module.exports = function (grunt) {
             'ngmin:prod',
             'uglify:prod',
             'copy:prod',
-            'template:prod'
+            'template:prod',
+            'ngdocs'
         ]
     );
 

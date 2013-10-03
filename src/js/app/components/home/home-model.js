@@ -39,7 +39,8 @@ angular.module(
              * Setter for the paragraphs on the model.
              *
              * @param {Array} newParagraphs The array of paragraphs to set.
-             * @returns {void}
+             *
+             * @returns {void} void
              *
              */
             setParagraphs: function (newParagraphs) {
@@ -53,7 +54,7 @@ angular.module(
              *
              * Getter for the paragraphs on the model.
              *
-             * @returns {Array}
+             * @returns {Array} The array of paragraphs.
              *
              */
             getParagraphs: function () {

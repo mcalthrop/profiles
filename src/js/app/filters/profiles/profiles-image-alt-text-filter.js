@@ -25,7 +25,7 @@
  * @param {String} altTextDefault The default alt text to use - may be blank
  * @param {String} nameFirst The first name of the person associated with the image
  * @param {String} nameLast The last name
- * @returns {String}
+ * @returns {String} The filtered text
  *
  */
 

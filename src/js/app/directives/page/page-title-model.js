@@ -39,7 +39,7 @@ angular.module(
              * Setter for the page title on the model.
              *
              * @param {String} newTitle The new page title to set.
-             * @returns {void}
+             * @returns {void} void
              *
              */
             setTitle: function (newTitle) {
@@ -53,7 +53,7 @@ angular.module(
              *
              * Getter for the page title on the model.
              *
-             * @returns {String}
+             * @returns {String} Page title
              *
              */
             getTitle: function () {
