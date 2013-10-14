@@ -1,15 +1,6 @@
 /* global angular */
 
 /**
- * @ngdoc overview
- * @name PageHeaderModelModule
- * @description
- *
- * Contains model for the page header.
- *
- */
-
-/**
  * @ngdoc object
  * @name PageHeaderModel
  * @function

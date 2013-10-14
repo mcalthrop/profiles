@@ -1,15 +1,6 @@
 /* global angular */
 
 /**
- * @ngdoc overview
- * @name MenuMainControllerModule
- * @description
- *
- * Contains main menu controller.
- *
- */
-
-/**
  * @ngdoc object
  * @name MenuMainController
  * @requires $scope

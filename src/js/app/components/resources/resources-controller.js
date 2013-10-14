@@ -1,15 +1,6 @@
 /* global angular */
 
 /**
- * @ngdoc overview
- * @name ResourcesControllerModule
- * @description
- *
- * Contains the resources page controller.
- *
- */
-
-/**
  * @ngdoc object
  * @name ResourcesController
  * @requires $scope
@@ -22,6 +13,7 @@
  * @description
  *
  * Controller for the resources page:
+ *
  *   - set the model on the controller's `$scope`
  *   - set the current menu item id
  *   - call the resources data service, and set values on resources model accordingly

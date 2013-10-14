@@ -1,15 +1,6 @@
 /* global angular */
 
 /**
- * @ngdoc overview
- * @name HomeControllerModule
- * @description
- *
- * Contains definition of HomeController.
- *
- */
-
-/**
  * @ngdoc object
  * @name HomeController
  * @requires $scope
@@ -24,6 +15,7 @@
  * Define controller for the Home page.
  *
  * Do the following:
+ *
  *   - set the model on the controller's `$scope`
  *   - set the current menu item id
  *   - call the home data service, and set values on home model accordingly

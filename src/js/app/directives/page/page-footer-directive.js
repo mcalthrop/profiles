@@ -1,15 +1,6 @@
 /* global angular */
 
 /**
- * @ngdoc overview
- * @name PageFooterDirectiveModule
- * @description
- *
- * Contains the prPageFooter directive.
- *
- */
-
-/**
  * @ngdoc directive
  * @name prPageFooter
  * @description

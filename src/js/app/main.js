@@ -1,29 +1,15 @@
 /* global angular */
 
 /**
- * @ngdoc overview
- * @name MainApp
- * @requires AppComponentsModule
- * @requires AppDirectivesModule
- * @requires AppFiltersModule
- * @requires AppLibrariesModule
- * @description
- *
- * # MainApp
- *
- * This is the main script, which does the following:
- *   - loads all the submodules
- *   - defines routes via `$routeProvider`
- *
- */
-
-/**
  * @ngdoc object
  * @name MainApp
  * @requires $routeProvider
  * @description
  *
- * Define all URI routes according to value provided by `$routeProvider`.
+ * This is the main script, which does the following:
+ *
+ *   - loads all the submodules
+ *   - defines routes via `$routeProvider`
  *
  */
 

@@ -1,16 +1,6 @@
 /* global angular */
 
 /**
- * @ngdoc overview
- * @name ResourcesWrapperServiceModule
- * @requires ngResource
- * @description
- *
- * Contains the resources wrapper service.
- *
- */
-
-/**
  * @ngdoc service
  * @name ResourcesWrapperService
  * @requires $resource

@@ -1,15 +1,6 @@
 /* global angular */
 
 /**
- * @ngdoc overview
- * @name HomeModelModule
- * @description
- *
- * Defines HomeModel.
- *
- */
-
-/**
  * @ngdoc object
  * @name HomeModel
  * @function

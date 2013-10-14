@@ -1,16 +1,6 @@
 /* global angular */
 
 /**
- * @ngdoc overview
- * @name HomeWrapperServiceModule
- * @requires ngResource
- * @description
- *
- * Contains the home wrapper service.
- *
- */
-
-/**
  * @ngdoc service
  * @name HomeWrapperService
  * @requires $resource

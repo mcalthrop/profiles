@@ -1,15 +1,6 @@
 /* global angular */
 
 /**
- * @ngdoc overview
- * @name ProfilesControllerModule
- * @description
- *
- * Contains the profiles page controller.
- *
- */
-
-/**
  * @ngdoc object
  * @name ProfilesController
  * @requires $scope
@@ -22,6 +13,7 @@
  * @description
  *
  * Controller for the profiles page:
+ *
  *   - set the model on the controller's `$scope`
  *   - set the current menu item id
  *   - call the profiles data service, and set values on profiles model accordingly

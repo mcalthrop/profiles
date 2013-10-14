@@ -1,15 +1,6 @@
 /* global angular */
 
 /**
- * @ngdoc overview
- * @name MenuMainDirectiveModule
- * @description
- *
- * Contains the prMenuMain directive.
- *
- */
-
-/**
  * @ngdoc directive
  * @name prMenuMain
  * @description

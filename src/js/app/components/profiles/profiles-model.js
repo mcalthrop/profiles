@@ -1,15 +1,6 @@
 /* global angular */
 
 /**
- * @ngdoc overview
- * @name ProfilesModelModule
- * @description
- *
- * Defines ProfilesModel.
- *
- */
-
-/**
  * @ngdoc object
  * @name ProfilesModel
  * @function

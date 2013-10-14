@@ -1,16 +1,6 @@
 /* global angular */
 
 /**
- * @ngdoc overview
- * @name ProfilesDataServiceModule
- * @requires ngResource
- * @description
- *
- * Define the profiles data service.
- *
- */
-
-/**
  * @ngdoc service
  * @name ProfilesDataService
  * @requires $resource

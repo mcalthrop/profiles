@@ -1,15 +1,6 @@
 /* global angular */
 
 /**
- * @ngdoc overview
- * @name PageTitleControllerModule
- * @description
- *
- * Contains page title controller.
- *
- */
-
-/**
  * @ngdoc object
  * @name PageTitleController
  * @requires $scope

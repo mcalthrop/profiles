@@ -1,15 +1,6 @@
 /* global angular */
 
 /**
- * @ngdoc overview
- * @name ProfilesImageAltTextFilterModule
- * @description
- *
- * Contains ProfilesImageAltText filter.
- *
- */
-
-/**
  * @ngdoc filter
  * @name ProfilesImageAltText
  * @description

@@ -1,15 +1,6 @@
 /* global angular */
 
 /**
- * @ngdoc overview
- * @name PageHeaderDirectiveModule
- * @description
- *
- * Contains the prPageHeader directive.
- *
- */
-
-/**
  * @ngdoc directive
  * @name prPageHeader
  * @description

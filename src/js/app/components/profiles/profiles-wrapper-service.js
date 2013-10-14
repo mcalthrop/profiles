@@ -1,16 +1,6 @@
 /* global angular */
 
 /**
- * @ngdoc overview
- * @name ProfilesWrapperServiceModule
- * @requires ngResource
- * @description
- *
- * Contains the profiles wrapper service.
- *
- */
-
-/**
  * @ngdoc service
  * @name ProfilesWrapperService
  * @requires $resource

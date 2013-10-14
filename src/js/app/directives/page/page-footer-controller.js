@@ -1,15 +1,6 @@
 /* global angular */
 
 /**
- * @ngdoc overview
- * @name PageFooterControllerModule
- * @description
- *
- * Contains page footer controller.
- *
- */
-
-/**
  * @ngdoc object
  * @name PageFooterController
  * @requires $scope

@@ -1,16 +1,6 @@
 /* global angular */
 
 /**
- * @ngdoc overview
- * @name HomeDataServiceModule
- * @requires ngResource
- * @description
- *
- * Define the home data service.
- *
- */
-
-/**
  * @ngdoc service
  * @name HomeDataService
  * @requires $resource

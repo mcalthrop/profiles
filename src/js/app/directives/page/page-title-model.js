@@ -1,15 +1,6 @@
 /* global angular */
 
 /**
- * @ngdoc overview
- * @name PageTitleModelModule
- * @description
- *
- * Contains PageTitleModel.
- *
- */
-
-/**
  * @ngdoc object
  * @name PageTitleModel
  * @function
@@ -47,7 +38,7 @@ angular.module(
             },
             /**
              * @ngdoc method
-             * @name PageTitleModel#getParagraphs
+             * @name PageTitleModel#getTitle
              * @methodOf PageTitleModel
              * @description
              *

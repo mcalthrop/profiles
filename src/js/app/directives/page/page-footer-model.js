@@ -1,17 +1,8 @@
 /* global angular */
 
 /**
- * @ngdoc overview
- * @name PageFooterModelModule
- * @description
- *
- * Contains model for the page footer.
- *
- */
-
-/**
  * @ngdoc object
- * @name MenuMainModel
+ * @name PageFooterModel
  * @function
  * @description
  *

@@ -1,17 +1,8 @@
 /* global angular */
 
 /**
- * @ngdoc overview
- * @name AboutModelModule
- * @description
- *
- * Defines AboutModel.
- *
- */
-
-/**
  * @ngdoc object
- * @name AboutModel
+ * @name ResourcesModel
  * @function
  * @description
  *
@@ -32,8 +23,8 @@ angular.module(
         return {
             /**
              * @ngdoc method
-             * @name AboutModel#setParagraphs
-             * @methodOf AboutModel
+             * @name ResourcesModel#setParagraphs
+             * @methodOf ResourcesModel
              * @description
              *
              * Setter for the paragraphs on the model.
@@ -48,8 +39,8 @@ angular.module(
             },
             /**
              * @ngdoc method
-             * @name AboutModel#getParagraphs
-             * @methodOf AboutModel
+             * @name ResourcesModel#getParagraphs
+             * @methodOf ResourcesModel
              * @description
              *
              * Getter for the paragraphs on the model.

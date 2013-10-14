@@ -1,16 +1,6 @@
 /* global angular */
 
 /**
- * @ngdoc overview
- * @name AboutWrapperServiceModule
- * @requires ngResource
- * @description
- *
- * Contains the about wrapper service.
- *
- */
-
-/**
  * @ngdoc service
  * @name AboutWrapperService
  * @requires $resource

@@ -1,15 +1,6 @@
 /* global angular */
 
 /**
- * @ngdoc overview
- * @name AboutModelModule
- * @description
- *
- * Contains AboutModel.
- *
- */
-
-/**
  * @ngdoc object
  * @name AboutModel
  * @function

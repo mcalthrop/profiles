@@ -1,16 +1,6 @@
 /* global angular */
 
 /**
- * @ngdoc overview
- * @name AboutDataServiceModule
- * @requires ngResource
- * @description
- *
- * Define the about data service.
- *
- */
-
-/**
  * @ngdoc service
  * @name AboutDataService
  * @requires $resource

@@ -1,15 +1,6 @@
 /* global angular */
 
 /**
- * @ngdoc overview
- * @name PageHeaderControllerModule
- * @description
- *
- * Contains page header controller.
- *
- */
-
-/**
  * @ngdoc object
  * @name PageHeaderController
  * @requires $scope

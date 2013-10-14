@@ -1,15 +1,6 @@
 /* global angular */
 
 /**
- * @ngdoc overview
- * @name MenuMainModelModule
- * @description
- *
- * Contains model for the main menu.
- *
- */
-
-/**
  * @ngdoc object
  * @name MenuMainModel
  * @function
