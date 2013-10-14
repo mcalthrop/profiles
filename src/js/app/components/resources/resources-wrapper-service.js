@@ -1,7 +1,7 @@
 /* global angular */
 
 /**
- * @ngdoc module
+ * @ngdoc overview
  * @name ResourcesWrapperServiceModule
  * @requires ngResource
  * @description

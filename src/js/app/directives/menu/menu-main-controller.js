@@ -1,7 +1,7 @@
 /* global angular */
 
 /**
- * @ngdoc module
+ * @ngdoc overview
  * @name MenuMainControllerModule
  * @description
  *
@@ -10,7 +10,7 @@
  */
 
 /**
- * @ngdoc controller
+ * @ngdoc object
  * @name MenuMainController
  * @requires $scope
  * @requires MenuMainModel

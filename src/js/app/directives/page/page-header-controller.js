@@ -1,7 +1,7 @@
 /* global angular */
 
 /**
- * @ngdoc module
+ * @ngdoc overview
  * @name PageHeaderControllerModule
  * @description
  *
@@ -10,7 +10,7 @@
  */
 
 /**
- * @ngdoc controller
+ * @ngdoc object
  * @name PageHeaderController
  * @requires $scope
  * @requires PageHeaderModel

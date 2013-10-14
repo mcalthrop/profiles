@@ -1,13 +1,15 @@
 /* global angular */
 
 /**
- * @ngdoc module
+ * @ngdoc overview
  * @name MainApp
  * @requires AppComponentsModule
  * @requires AppDirectivesModule
  * @requires AppFiltersModule
  * @requires AppLibrariesModule
  * @description
+ *
+ * # MainApp
  *
  * This is the main script, which does the following:
  *   - loads all the submodules
@@ -16,7 +18,8 @@
  */
 
 /**
- * @ngdoc config
+ * @ngdoc object
+ * @name MainApp
  * @requires $routeProvider
  * @description
  *
