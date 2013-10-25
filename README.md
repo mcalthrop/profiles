@@ -7,10 +7,10 @@ https://github.com/mcalthrop/profiles
 ## This branch
 This branch uses AngularJS to implement the required functionality in a single-page app.
 
-## In progress
-- set up grunt build environment
-
 ## Pipeline
+- write unit tests for MarkdownToHtml filter
+- modify all content to use Markdown instead of HTML
+- retrieve content from third-party CMS (intention: http://www.contentful.com/)
 - travis integration
 - e2e testing
 - create contact page (placeholder)
