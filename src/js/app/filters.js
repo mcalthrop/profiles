@@ -3,7 +3,8 @@
 angular.module(
     'AppFiltersModule',
     [
-        'ProfilesFiltersModule'
+        'ProfilesFiltersModule',
+        'UtilFiltersModule'
     ]
 );
 

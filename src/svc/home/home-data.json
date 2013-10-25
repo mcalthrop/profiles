@@ -1,10 +1,10 @@
 {
-    "paragraphs": [
-        "This mini-site is a demonstration of a <a href='http://en.wikipedia.org/wiki/Single-page_application' target='_blank'>single-page application</a> I am creating using AngularJS.",
-        "For a more complex page that illustrates responsive web design, see the <a href='#/profiles'>profiles</a> page.",
-        "I have listed a bunch of useful <a href='#/resources'>resources</a> I have found along the way.",
-        "And for further information describing technical capabilities this site illustrates, see <a href='#/about'>about</a>.",
-        "The full source is available on <a href='https://github.com/mcalthrop/profiles/tree/imp/angular' target='_blank'>github</a>.",
-        "<em>Note:</em> this is a work in progress; you can see <a href=\"https://github.com/mcalthrop/profiles/tree/imp/angular#pipeline\" target=\"_blank\">what's in the pipeline</a>."
+    "markdownParagraphs": [
+        "This mini-site is a demonstration of a [single-page application](http://en.wikipedia.org/wiki/Single-page_application) I am creating using AngularJS.",
+        "For a more complex page that illustrates responsive web design, see the [profiles](#/profiles) page.",
+        "I have listed a bunch of useful [resources](#/resources) I have found along the way.",
+        "And for further information describing technical capabilities this site illustrates, see [about](#/about).",
+        "The full source is available on [github](https://github.com/mcalthrop/profiles/tree/imp/angular)",
+        "**Note:** this is a work in progress; you can see [what's in the pipeline](https://github.com/mcalthrop/profiles/tree/imp/angular#pipeline)."
     ]
 }

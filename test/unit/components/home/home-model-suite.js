@@ -4,12 +4,12 @@ describe('Testing HomeModel:', function () {
     'use strict';
 
     var modelToTest,
-        testParagraphs1 = [
+        testMarkdownParagraphs1 = [
             'this',
             'that',
             'the other'
         ],
-        testParagraphs2 = [
+        testMarkdownParagraphs2 = [
             'some',
             'different',
             'values',
@@ -23,37 +23,37 @@ describe('Testing HomeModel:', function () {
         modelToTest = HomeModel;
     }));
 
-    describe('paragraphs setter', function () {
+    describe('markdown paragraphs setter', function () {
 
         it('is passed correct value', function () {
-            spyOn(modelToTest, 'setParagraphs');
-            modelToTest.setParagraphs(testParagraphs1);
-            expect(modelToTest.setParagraphs).toHaveBeenCalledWith(testParagraphs1);
+            spyOn(modelToTest, 'setMarkdownParagraphs');
+            modelToTest.setMarkdownParagraphs(testMarkdownParagraphs1);
+            expect(modelToTest.setMarkdownParagraphs).toHaveBeenCalledWith(testMarkdownParagraphs1);
         });
 
         it('should get the correct number of paragraphs', function () {
-            spyOn(modelToTest, 'setParagraphs');
-            modelToTest.setParagraphs(testParagraphs1);
-            expect(modelToTest.setParagraphs.mostRecentCall.args[0].length).toEqual(testParagraphs1.length);
+            spyOn(modelToTest, 'setMarkdownParagraphs');
+            modelToTest.setMarkdownParagraphs(testMarkdownParagraphs1);
+            expect(modelToTest.setMarkdownParagraphs.mostRecentCall.args[0].length).toEqual(testMarkdownParagraphs1.length);
         });
 
     });
 
-    describe('paragraphs getter', function () {
+    describe('markdown paragraphs getter', function () {
 
         it('should return empty array when no setter called', function () {
-            expect(modelToTest.getParagraphs()).toEqual([]);
+            expect(modelToTest.getMarkdownParagraphs()).toEqual([]);
         });
 
         it('should return parameters set', function () {
-            modelToTest.setParagraphs(testParagraphs1);
-            expect(modelToTest.getParagraphs()).toEqual(testParagraphs1);
+            modelToTest.setMarkdownParagraphs(testMarkdownParagraphs1);
+            expect(modelToTest.getMarkdownParagraphs()).toEqual(testMarkdownParagraphs1);
         });
 
         it('should return most recent parameters set', function () {
-            modelToTest.setParagraphs(testParagraphs1);
-            modelToTest.setParagraphs(testParagraphs2);
-            expect(modelToTest.getParagraphs()).toEqual(testParagraphs2);
+            modelToTest.setMarkdownParagraphs(testMarkdownParagraphs1);
+            modelToTest.setMarkdownParagraphs(testMarkdownParagraphs2);
+            expect(modelToTest.getMarkdownParagraphs()).toEqual(testMarkdownParagraphs2);
         });
 
     });

@@ -44,7 +44,7 @@ angular.module(
                 MenuMainModel.setCurrentMenuItemId(MenuMainModel.HOME);
 
                 HomeDataService.query(function (data) {
-                    HomeModel.setParagraphs(data.paragraphs);
+                    HomeModel.setMarkdownParagraphs(data.markdownParagraphs);
                 });
 
                 HomeWrapperService.query(function (data) {

@@ -18,38 +18,38 @@ angular.module(
     .factory(
     'HomeModel',
     function () {
-        var _paragraphs = [];
+        var _markdownParagraphs = [];
 
         return {
             /**
              * @ngdoc method
-             * @name HomeModel#setParagraphs
+             * @name HomeModel#setMarkdownParagraphs
              * @methodOf HomeModel
              * @description
              *
-             * Setter for the paragraphs on the model.
+             * Setter for the Markdown paragraphs on the model.
              *
-             * @param {Array} newParagraphs The array of paragraphs to set.
+             * @param {Array} newMarkdownParagraphs The array of Markdown paragraphs to set.
              *
              * @returns {void} void
              *
              */
-            setParagraphs: function (newParagraphs) {
-                _paragraphs = newParagraphs;
+            setMarkdownParagraphs: function (newMarkdownParagraphs) {
+                _markdownParagraphs = newMarkdownParagraphs;
             },
             /**
              * @ngdoc method
-             * @name HomeModel#getParagraphs
+             * @name HomeModel#getMarkdownParagraphs
              * @methodOf HomeModel
              * @description
              *
-             * Getter for the paragraphs on the model.
+             * Getter for the Markdown paragraphs on the model.
              *
-             * @returns {Array} The array of paragraphs.
+             * @returns {Array} The paragraphs in Markdown format.
              *
              */
-            getParagraphs: function () {
-                return _paragraphs;
+            getMarkdownParagraphs: function () {
+                return _markdownParagraphs;
             }
         };
     }

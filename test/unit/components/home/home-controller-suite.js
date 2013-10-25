@@ -38,7 +38,7 @@ describe('Testing HomeController:', function () {
 
         mockHomeModel = jasmine.createSpyObj(
             'mockHomeModel',
-            ['setParagraphs', 'getParagraphs']
+            ['setMarkdownParagraphs', 'getMarkdownParagraphs']
         );
         mockPageTitleModel = jasmine.createSpyObj(
             'mockPageTitleModel',
@@ -76,12 +76,12 @@ describe('Testing HomeController:', function () {
             expect(mockHomeDataService.query).toHaveBeenCalled();
         });
 
-        it('should call setParagraphs()', function () {
-            expect(mockHomeModel.setParagraphs).toHaveBeenCalled();
+        it('should call setMarkdownParagraphs()', function () {
+            expect(mockHomeModel.setMarkdownParagraphs).toHaveBeenCalled();
         });
 
-        it('should call setParagraphs() with correct parameters', function () {
-            var mostRecentCallArgs = mockHomeModel.setParagraphs.mostRecentCall.args;
+        it('should call setMarkdownParagraphs() with correct parameters', function () {
+            var mostRecentCallArgs = mockHomeModel.setMarkdownParagraphs.mostRecentCall.args;
 
             for (var i = 0, len = mockHomeDataJson.length; i < len; i++) {
                 expect(mostRecentCallArgs[i]).toEqual(mockHomeDataJson[i]);
@@ -104,7 +104,7 @@ describe('Testing HomeController:', function () {
             expect(mockPageHeaderModel.setTitle).toHaveBeenCalled();
         });
 
-        it('should call setParagraphs() on page header model', function () {
+        it('should call setMarkdownParagraphs() on page header model', function () {
             expect(mockPageHeaderModel.setParagraphs).toHaveBeenCalled();
         });
 
